@@ -8,3 +8,13 @@
     font-weight: bold;
     font-size: 30px;
 }
+
+.id{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.id-user{
+    margin-right: 20px;
+}
