@@ -77,6 +77,24 @@
     font-size: 12px;
 }
 
+.quantity-main{
+    text-align: center;
+    border: 1px solid #ebebeb;
+    width: 145px;
+}
+
+#quantity{
+    width: 60px;
+    text-align: center;
+}
+
+.product-qty > span{
+    background-color: #0275d8;
+    border-radius: 20px;
+    padding: 0px 10px;
+    color: white;
+}
+
 .pre-order{
     font-style: italic;
     font-weight: bold;
