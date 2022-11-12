@@ -1,0 +1,38 @@
+.content {
+    margin: 3em 0;
+    padding: 0 10em;
+    text-align: center;
+}
+
+.content img {
+    padding-top: 2.5em;
+}
+
+.content-header {
+    font-family: Assistant;
+    font-size: 3em;
+}
+
+.content-subheader {
+    font-family: Assistant;
+    font-size: 2em;
+}
+
+.content p {
+    text-align: start;
+}
+
+.contact-header {
+    font-family: Assistant;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: start;
+}
+
+.contact-content {
+    font-family: Assistant;
+    font-size: 1.2em;
+    padding: 6px 0;
+    text-align: start;
+}

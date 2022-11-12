@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeliSkuy</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">
+            <img src="assets/icon.png" alt="BeliSkuy" width="44px">
+            <span class="title">BeliSkuy</span>
+        </div>
+        <nav>
+            <ul>
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="nav-items">
+                    <li><a class="menu" href="index.html">Home</a></li>
+                    <li><a class="menu" href="chat.html">Chat</a></li>
+                    <li><a class="menu" href="cart.html">Cart</a></li>
+                    <li><a class="menu" href="register.html">Register</a></li>
+                    <li><a class="menu-btn" href="login.html">Login</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>Chat</h1>
+        <div>
+            <label for="Search">Search</label>
+            <input type="text" name="Search" id="Search" placeholder="Username">
+        </div>   
+    </div>
+
+    <div class="main-chat">
+        <div class="global-chat">
+            <div class="selected-user">
+                <div class="list_chat">
+                    <div class="info-chat">
+                        <div class="lasted-chat">
+                            <img src="./assets/chat/Seller 1.jpg" alt="seller" class="user">
+                            <div class="chat">
+                                Can I use the COD payment system?
+                            </div>
+                        </div>
+                        <div class="info_seller">
+                            <div class="name">KanderjayaStore</div>
+                            <div class="status">Super-Seller</div>
+                            <div class="last_chat">17 Nov</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list_chat">
+                <div class="info-chat">
+                    <div class="lasted-chat">
+                        <img src="./assets/chat/Seller 2.jpg" alt="seller" class="user">
+                        <div class="chat">
+                           Don't forget to follow us. Thank you!
+                        </div>
+                    </div>
+                    <div class="info_seller">
+                        <div class="name">Dskuy</div>
+                        <div class="status">Standard-User</div>
+                        <div class="last_chat">16 Nov</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="list_chat">
+                <div class="info-chat">
+                    <div class="lasted-chat">
+                        <img src="./assets/chat/Seller 3.jpg" alt="seller" class="user">
+                        <div class="chat">
+                            Hi, there's a new promo for you! 
+                        </div>
+                    </div>
+                    <div class="info_seller">
+                        <div class="name">GenZIndo</div>
+                        <div class="status">Mall</div>
+                        <div class="last_chat">12 Nov</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="list_chat">
+                <div class="info-chat">
+                    <div class="lasted-chat">
+                        <img src="./assets/chat/Seller 4.jpg" alt="seller" class="user">
+                        <div class="chat">
+                            Thank you.
+                        </div>
+                    </div>
+                    <div class="info_seller">
+                        <div class="name">StyleLiveOn</div>
+                        <div class="status">Merchant</div>
+                        <div class="last_chat">11 Nov</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="list_chat">
+                <div class="info-chat">
+                    <div class="lasted-chat">
+                        <img src="./assets/chat/Seller 5.jpg" alt="seller" class="user">
+                        <div class="chat">
+                            Hola hola. There promo special only for YOU!!!
+                        </div>
+                    </div>
+                    <div class="info_seller">
+                        <div class="name">KerizuJPN</div>
+                        <div class="status">Official Store</div>
+                        <div class="last_chat">7 Nov</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="chat_active">
+            <div class="profile_chat">
+                <div class="profile_chat_info">
+                    <img src="./assets/chat/Seller 1.jpg" alt="user_selected" class="user">
+                    <div class="profile_name">Kanderjaya</div>
+                    <div class="border-seller">
+                        <div class="position">Seller</div>
+                    </div>
+                </div>
+
+                <div class="active">
+                    Status: 
+                        <span class="online">Online</span>
+                </div>
+            </div>
+    
+            <div class="history_chat">
+                <div class="chat_customer">
+                    <div class="message">Good afternoon, Sir. Is there a Jeans product with size L?</div> 
+                    <span class="time">15:16</span>
+                    <span class="read">R</span>
+                </div>
+                
+                <div class="reply_user">
+                    <div class="message_system">
+                        Thank you for contacting Kanderjaya Store Indonesia!
+                        <br>
+                        Please wait until we reply your message 😊
+                        <br>
+                        ----
+                        <br>
+                        Shipping Information :
+                        <br>
+                        Monday - Sunday till 3PM
+                    </div>
+                    <span class="time">15:16</span>
+                </div>
+    
+                <div class="reply_user">
+                    <div class="message">
+                        Good afternoon too. For jeans size L is available.
+                    </div>
+                    <div class="message">
+                        If you buy 2 jeans, you will get a special gift from our store.
+                    </div>
+                    <span class="time">15:17</span>
+                </div>
+    
+                <div class="chat_customer">
+                    <div class="message">May I know the basic material of jeans?</div> 
+                    <span class="time">15:18</span>
+                    <span class="read">R</span>
+                </div>
+    
+                <div class="reply_user">
+                    <div class="message">The jeans we produce are made of cotton.</div>
+                    <span class="time">15:20</span>
+                </div>
+                
+                <div class="chat_customer">
+                    <div class="message">Can I use the COD payment system?</div> 
+                    <span class="time">15:28</span>
+                    <span class="send">S</span>
+                </div>
+            </div>
+    
+            <div class="respond_user">
+                <textarea name="respond" id="respond" cols="50" rows="10" placeholder="Write a message"></textarea>
+                <input type="submit" value="Send">
+            </div>
+        </div>    
+    </div>
+    
+    <div class="footer">
+        <div class="social-links">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2022 BeliSkuy. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
+
+
