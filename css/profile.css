@@ -1,7 +1,23 @@
-*{
-    padding: 0%;
-    margin: 0%;
+.profile-pic{
+    margin: 20px;
 }
+
+.border-img{
+    height: 100%;
+    width: 100%;
+}
+
+.border-img > img{
+    border-radius: 50%;
+    max-width: 20%;
+    max-height: 20%;
+    object-fit: cover;
+}
+
+/* .level-user{
+    font-weight: bold;
+    color: #0275d8;;
+} */
 
 .head-content{
     margin: 20px;
@@ -9,12 +25,47 @@
     font-size: 30px;
 }
 
-.id{
+.info{
     display: flex;
     flex-direction: row;
     margin: 20px;
 }
 
-.id-user{
-    margin-right: 20px;
+.info-head{
+    width: 120px;
+}
+
+.value > input{
+    width: 200px;
+}
+
+.value-email{
+    width: 200px;
+}
+
+.change{
+    margin-left: 10px;
+}
+
+.option-gender{
+    position: absolute;
+    transform: scaleY(0);
+    transition: transform 500ms;
+    transform-origin: top;
+}
+
+.verify{
+    margin-left: 20px;
+}
+
+.change-gender:hover .option-gender{
+    transform: scaleY(1);
+}
+
+.verify > div {
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+    padding: 0px 10px;
+    background-color: #0275d8;
 }
