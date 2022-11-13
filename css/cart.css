@@ -1,3 +1,7 @@
+/* body{
+    width:fit-content;
+} */
+
 .content-head{
     display: flex;
     flex-direction: row;
@@ -12,9 +16,9 @@
     font-size: 23px;
 }
 
-.cart-all{
+/* .cart-all{
     width: 50%;
-}
+} */
 
 .seller-info{
     display: flex;
@@ -57,7 +61,24 @@
 
 .product:hover{
     background-color: #71bdffe3;
+    /* width:max-content; */
     border-radius: 20px;
+}
+
+.price-info:hover{
+    background-color: #71bdffe3;
+    /* width: max-content; */
+    border-radius: 20px;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.product-info > div{
+    margin: 20px;
 }
 
 /* .product-img{
@@ -81,6 +102,7 @@
     text-align: center;
     border: 1px solid #ebebeb;
     width: 145px;
+    /* margin: 10px 0; */
 }
 
 #quantity{
@@ -95,6 +117,51 @@
     color: white;
 }
 
+.nego{
+    text-align: center;
+    border: 1px solid #ebebeb;
+    width: 145px;
+    margin: 10px 0;
+}
+
+#negotiate{
+    width: 60px;
+    text-align: center;
+}
+
+.negotiate-act:hover{
+    background-color: #0275d8;
+    border-radius: 20px;
+}
+
+.negotiate-act>a{
+    text-decoration: none;
+    color: white;
+}
+
+.negotiate > span{
+    background-color: #0275d8;
+    border-radius: 20px;
+    padding: 0px 10px;
+    color: white;
+}
+
+.confirm-nego{
+    background-color: #7caa2d;
+    border-radius: 20px;
+    width: 80px;
+    text-align: center;
+    color: white;
+}
+
+.confirm-original{
+    background-color: #0275d8;
+    border-radius: 20px;
+    width: 80px;
+    text-align: center;
+    color: white;
+}
+
 .pre-order{
     font-style: italic;
     font-weight: bold;
@@ -105,3 +172,185 @@
     font-weight: bold;
     color: #0275d8;
 }
+
+.courier-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-code{
+    margin-bottom: 10px;
+}
+
+.promo-code > div >input{
+    margin-top: 10px
+}
+
+.action{
+    color: white;
+}
+
+.trash{
+    width: 1rem;
+    height: 1rem;
+}
+
+.trash:hover{
+    background-image: url('/assets/cart/trash.png');
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+}
+
+.trash > a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.wishlist{
+    margin-top: 10px;
+}
+
+.delete{
+    margin-top: 10px;
+}
+
+.wishlist > a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.trash>a:hover{
+    color: red;
+}
+
+.wishlist>a:hover{
+    color: red;
+}
+
+.head-price{
+    font-weight: bold;
+    text-align: center;
+    width: 800px;
+    margin: 10px;
+}
+
+.price-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.price-list{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.confirm-seller > a{
+    text-decoration: none;
+    color: white;
+    width: 200px;
+}
+
+.confirm-seller > a:hover{
+    background-color: white;
+    border-radius: 25px;
+    color: #0275d8;
+}
+
+@media (max-width:480px){
+    .img-product{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 25%;
+    }
+    .product-name{
+        font-weight: bold;
+        font-size: 15px;
+        width: auto;
+    }
+    .product-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .nego{
+        position: absolute;
+        transform: scaleY(0);
+    }
+    .right-info{
+        position: absolute;
+        transform: scaleY(0);
+    }
+
+    .price-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .price-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .product:hover{
+        background-color: #71bdffe3;
+        width:min-content;
+        border-radius: 20px;
+    }
+    
+    .price-info:hover{
+        background-color: #71bdffe3;
+        width:max-content;
+        border-radius: 20px;
+    }
+
+    .confirm-seller > a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    .confirm-seller > a:hover{
+        background-color: white;
+        border-radius: 25px;
+        color: #0275d8;
+    }
+
+    .head-price{
+        font-weight: bold;
+        text-align: center;
+        width: 400px;
+        margin: 10px;
+    }
+
+    .price-org{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nego-price{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .confirm-original{
+        margin-left: 20px;
+    }
+
+    .confirm-nego{
+        margin-left: 20px;
+    }
+}
+
