@@ -1,7 +1,3 @@
-/* body{
-    width:fit-content;
-} */
-
 .content-head{
     display: flex;
     flex-direction: row;
@@ -51,6 +47,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.left-info{
+    width: 300px;
 }
 
 #cart{
@@ -105,6 +105,12 @@
     /* margin: 10px 0; */
 }
 
+.current-price{
+    text-align: center;
+    border: 1px solid #ebebeb;
+    width: 145px;
+}
+
 #quantity{
     width: 60px;
     text-align: center;
@@ -129,6 +135,51 @@
     text-align: center;
 }
 
+.case{
+    text-align: center;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 25px;
+    width: 125px;
+}
+
+.case-tq{
+    text-decoration: none;
+    color: #7caa2d;
+}
+
+.case-close{
+    text-decoration: none;
+    color: red;
+}
+
+.case-discuss{
+    text-decoration: none;
+    color: #0275d8;
+}
+
+.negotiate-acc{
+    background-color:#7caa2d;
+    border-radius: 20px;
+    color: white;
+}
+
+.price-green{
+    font-weight: bold;
+    background-color: white;
+    border-radius: 20px;
+    color:chartreuse;
+}
+
+.negotiate-declined{
+    background-color:red;
+    border-radius: 20px;
+}
+
+.negotiate-declined>div{
+    color: white;
+}
+
 .negotiate-act:hover{
     background-color: #0275d8;
     border-radius: 20px;
@@ -146,7 +197,15 @@
     color: white;
 }
 
-.confirm-nego{
+.confirm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin : 10px 0;
+}
+
+.confirm-bestPrice{
     background-color: #7caa2d;
     border-radius: 20px;
     width: 80px;
@@ -178,6 +237,22 @@
     flex-direction: column;
 }
 
+.nego-info{
+    text-align: center;
+}
+
+.action-nego{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.respond-nego{
+    margin-top: 10px;
+    width: 300px;
+}
+
 .promo-code{
     margin-bottom: 10px;
 }
@@ -187,6 +262,7 @@
 }
 
 .action{
+    text-align: center;
     color: white;
 }
 
@@ -208,26 +284,22 @@
     margin-left: 20px;
 }
 
-.wishlist{
+.act{
     margin-top: 10px;
 }
 
-.delete{
-    margin-top: 10px;
-}
-
-.wishlist > a{
+.link-act{
     text-decoration: none;
     color: white;
     margin-left: 20px;
 }
 
-.trash>a:hover{
+.link-act:hover{
     color: red;
 }
 
-.wishlist>a:hover{
-    color: red;
+.act > div{
+    text-align: left;
 }
 
 .head-price{
@@ -266,24 +338,45 @@
 }
 
 @media (max-width:480px){
-    .img-product{
-        width: 7rem;
-        height: 7rem;
-        border-radius: 25%;
+    body{
+        width:fit-content;
     }
+
+    .product{
+        width: min-content;
+    }
+
+    .left-info{
+        width: fit-content;
+    }
+
+    .img-product{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 25%;
+        padding: 0px;
+    }
+
     .product-name{
         font-weight: bold;
         font-size: 15px;
-        width: auto;
+        width: fit-content;
     }
+
+    .product-info > div {
+        margin: 5px;
+    }
+
     .product-info{
         display: flex;
         flex-direction: column;
     }
+
     .nego{
         position: absolute;
         transform: scaleY(0);
     }
+
     .right-info{
         position: absolute;
         transform: scaleY(0);
@@ -292,15 +385,17 @@
     .price-info{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
     }
 
     .price-list{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        width: fit-content;
+        width: max-content;
     }
 
     .product:hover{
@@ -313,6 +408,11 @@
         background-color: #71bdffe3;
         width:max-content;
         border-radius: 20px;
+    }
+
+    .confirm-seller{
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .confirm-seller > a{
@@ -335,8 +435,10 @@
 
     .price-org{
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
     }
 
     .nego-price{
@@ -352,5 +454,8 @@
     .confirm-nego{
         margin-left: 20px;
     }
+    
+    .promo-code{
+        margin: 0;
+    }
 }
-
