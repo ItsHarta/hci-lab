@@ -75,9 +75,9 @@
     transform-origin:left;
 }
 
-.verify{
-    /* margin-left: 20px; */
-}
+/* .verify{
+    margin-left: 20px;
+} */
 
 .change-gender:hover .option-gender{
     transform: scaleY(1);
