@@ -1,25 +1,20 @@
 .content {
+    margin-top: 2rem;
+    padding: 0 10% 10% 10%;
+    min-height: 350px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    background-image:  url("../assets/home.jpg");
-    height: 600px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.content:before {
-    content: '';
-    position: absolute;
-    height: 601px;
-    top: 6.4em;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    opacity: 0.6;
-    z-index: 0;
+.slider-caret {
+    cursor: pointer;
+}
+
+.slider-caret i {
+    font-size: 4rem;
+    color: darkgray;
 }
 
 .content-text {
@@ -45,4 +40,48 @@ h4 {
     color: white;
     background-color: #0275d8;
     padding: 10px 24px;
+}
+
+.slider{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+
+.slider ul{
+    position:relative;
+    width:100%;
+    margin:0;
+    padding:0;
+    display:inline-block;
+    list-style:none;
+}
+
+
+.slider ul li{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+    width:900px;
+    height:350px;
+}
+
+.slide-item {
+    max-height: 350px;
+    max-width: 900px;
+    display: flex;
+}
+
+.slide-col{
+    padding: 0 2.5rem;
+    height: 350px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slide-col img {
+    height: 300px;
 }
