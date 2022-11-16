@@ -337,7 +337,7 @@
     color: #0275d8;
 }
 
-@media (max-width:480px){
+@media screen and (max-width: 600px){
     body{
         width:fit-content;
     }
