@@ -1,7 +1,8 @@
 .global-chat{
-    /* border: #0275d8 solid 1px; */
+    border: #0275d8 solid 1px;
     height: 100%;
     width: 7000px;
+    width: 3000px;
 }
 
 .lasted-chat{
