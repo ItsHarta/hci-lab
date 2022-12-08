@@ -1,571 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeliSkuy</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cart.css">
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div class="header-title">
-            <img src="assets/icon.png" alt="BeliSkuy" width="44px">
-            <span class="title">BeliSkuy</span>
-        </div>
-        <nav>
-            <ul>
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                <div class="nav-items">
-                    <li><a class="menu" href="index.html">Home</a></li>
-                    <li><a class="menu" href="chat.html">Chat</a></li>
-                    <li><a class="menu" href="cart.html">Cart</a></li>
-                    <li><a class="menu-btn" href="/profile.html">Profile</a></li>
-                </div>
-            </ul>
-        </nav>
+      <div class="header-title">
+        <img src="assets/icon.png" alt="BeliSkuy" width="44px" />
+        <span class="title">BeliSkuy</span>
+      </div>
+      <nav>
+        <ul>
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="nav-items">
+            <li><a class="menu" href="index.html">Home</a></li>
+            <li><a class="menu" href="chat.html">Chat</a></li>
+            <li><a class="menu" href="cart.html">Cart</a></li>
+            <li><a class="menu-btn" href="/profile.html">Profile</a></li>
+          </div>
+        </ul>
+      </nav>
     </div>
-    
+
     <div class="content">
-        <div class="content-head">
-            <div class="cart-head">
-                Cart
-            </div>
-            <!-- <div class="Remove All">
+      <div class="content-head">
+        <div class="cart-head">Cart</div>
+        <!-- <div class="Remove All">
                 <input type="checkbox" name="all" id="all">
                 <label for="all">Select All</label>
             </div> -->
-        </div>
-        <hr>
-        <div class="content-main">
-            <div class="cart-all">
-                <div class="cart-list">
-                    <div class="seller-info">
-                        <input type="checkbox" name="seller" id="seller" checked>
-                        <div class="seller-username">
-                            KanderjayaStore
-                        </div>
-                        <div>
-                            |
-                        </div>
-                        <div class="seller-level">
-                            Super-Seller
-                        </div>
-                    </div>
-                    <div class="content-cart">
-                        <div class="product">
-                            <input type="checkbox" name="cart" id="cart" checked>
-                            <div class="product-img">
-                                <img src="/assets/cart/produkJeans-1.jpg" alt="" class="img-product">
-                            </div>
-                            <div class="product-info">
-
-                                <div class="left-info">
-                                    <div class="product-name">
-                                        DENIM - JIMMY AND MARTIN JEANS 
-                                    </div>
-                                    <div class="product-model">
-                                        [OG801-2] - Size 27
-                                    </div>
-                                    <div class="product-price">
-                                        IDR 199.950 <span>[Disc. 50%]</span>
-                                    </div>
-                                </div>
-
-                                <div class="mid-info">
-                                    <div class="quantity-main">
-                                        <!-- Need to add javascript function-->
-                                        Quantity:
-                                        <div class="product-qty">
-                                            <span class="qty-">-</span>
-                                            <input type="text" name="quantity" id="quantity" value="1">
-                                            <span class="qty+">+</span>
-                                        </div>
-                                        <div class="info-qty">
-                                            Min. Order : 1 pcs
-                                        </div>
-                                    </div>
-                                    <div class="current-price">
-                                        Total Current Price <br> <b>IDR 199.500</b>
-                                    </div>
-                                    <div class="nego">
-                                        Negotiate:
-                                        <div class="negotiate">
-                                            <span class="price-">-</span>
-                                            <input type="text" name="negotiate" id="negotiate" value="190.000">
-                                            <span class="price+">+</span>
-                                        </div>
-                                        <div class="nego-remain">
-                                            Negotiate Remain : 3
-                                        </div>     
-                                        <div class="negotiate-act">
-                                            <!-- Gambar tangan berjabat -->
-                                            <a href="">Negotiate Product</a>
-                                        </div>                                   
-                                    </div>
-                                </div>
-                                
-                                <div class="right-info">
-                                    <div class="nego-info">
-                                        <b>Negotiation Info</b>
-                                        <div class="respond-nego">
-                                            Negotiation Not Found
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="action">
-                                    <b>Action</b>
-                                    <div class="wishlist act">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <a href="" class="link-act">Mark as Wishlist!</a>
-                                    </div>
-                                    <div class="delete act">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                        <a href="" class="link-act">Delete</a>
-                                    </div>
-                                    <div class="refresh act">
-                                        <i class="fa-sharp fa-solid fa-rotate-right"></i>
-                                        <a href="" class="link-act">Refresh Product</a>
-                                    </div>
-                                    <div class="see-product act">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <a href="" class="link-act">Visit Product</a>
-                                    </div>
-                                    <div class="help act">
-                                        <i class="fa-regular fa-circle-question"></i>
-                                        <a href="" class="link-act">Help</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="product">
-                            <input type="checkbox" name="cart" id="cart" checked>
-                            <div class="product-img">
-                                <img src="/assets/cart/produkJeans-2.jpg" alt="" class="img-product">
-                            </div>
-                            <div class="product-info">
-                                <div class="left-info">
-                                    <div class="product-name">
-                                        DENIM - JIMMY AND MARTIN JEANS 
-                                    </div>
-                                    <div class="product-model">
-                                        [OG600-2] - Size 30
-                                    </div>
-                                    <div class="product-price">
-                                        IDR 214.950 <span>[Disc. 50%]</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="mid-info">
-                                    <div class="quantity-main">
-                                        <!-- Need to add javascript function-->
-                                        Quantity:
-                                        <div class="product-qty">
-                                            <span class="qty-">-</span>
-                                            <input type="text" name="quantity" id="quantity" value="1">
-                                            <span class="qty+">+</span>
-                                        </div>
-                                        <div class="info-qty">
-                                            Min. Order : 1 pcs
-                                        </div>
-                                    </div>
-                                    <div class="current-price">
-                                        Total Current Price <br> <b>IDR 214.950</b>
-                                    </div>
-                                    <div class="nego">
-                                        Negotiate:
-                                        <div class="negotiate-declined">
-                                            <!-- Gambar tangan berjabat -->
-                                            <!-- <a href="">Negotiate Product</a> -->
-                                            <div>Block</div>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                                
-                                <div class="right-info">
-                                    <div class="nego-info">
-                                        <b>Negotiation Info</b>
-                                        <div class="action-nego">
-                                            <div class="case">
-                                                Respond Seller
-                                            </div>
-                                            <div class="case-close case">
-                                                Close
-                                            </div>
-                                        </div>
-                                        <div class="respond-nego">
-                                            We apologize to the customer. For the price of the product <i>DENIM - JIMMY AND MARTIN JEANS</i> is net. Thank you.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="action">
-                                    <b>Action</b>
-                                    <div class="wishlist act">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <a href="" class="link-act">Mark as Wishlist!</a>
-                                    </div>
-                                    <div class="delete act">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                        <a href="" class="link-act">Delete</a>
-                                    </div>
-                                    <div class="refresh act">
-                                        <i class="fa-sharp fa-solid fa-rotate-right"></i>
-                                        <a href="" class="link-act">Refresh Product</a>
-                                    </div>
-                                    <div class="see-product act">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <a href="" class="link-act">Visit Product</a>
-                                    </div>
-                                    <div class="help act">
-                                        <i class="fa-regular fa-circle-question"></i>
-                                        <a href="" class="link-act">Help</a>
-                                    </div>
-                                </div>
-                            </div> 
-                       </div>
-                    </div>
-                    
-                    <div class="price-info">
-                        <div class="total-price">
-                            <div class="head-price">Summary Price</div>
-                            <div class="price-list">
-                                <div class="price-org">
-                                    <div class="price-org">Best Deal Price : IDR 414.900</div>
-                                    <div class="confirm">
-                                        <div class="confirm-original">
-                                            Original
-                                        </div>
-                                        <div class="confirm-bestPrice">
-                                            Best Price
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="promo-code">
-                                    <b>Promo Code</b>
-                                    <div>
-                                        <input type="text" name="promo" id="promo" placeholder="Insert Promo Code Here!">
-                                        <button>Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="confirm-seller">
-                            <a href="">Check Out</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="cart-list">
-                    <div class="seller-info">
-                        <input type="checkbox" name="seller" id="seller">
-                        <div class="seller-username">
-                            KerizuJPN
-                        </div>
-                        <div>
-                            |
-                        </div>
-                        <div class="seller-level">
-                            Official Store
-                        </div>
-                    </div>
-                    <div class="content-cart">
-                        <div class="product">
-                            <input type="checkbox" name="cart" id="cart">
-                            <div class="product-img">
-                                <img src="/assets/cart/produkSepatu-1.jpg" alt="" class="img-product">
-                            </div>
-                            <div class="product-info">
-
-                                <div class="left-info">
-                                    <div class="product-name">
-                                        Joemen J 49 Original Imported Shoes Men Women Work School Sports
-                                    </div>
-                                    <div class="product-model">
-                                        [Black-Red] - Size 39
-                                    </div>
-                                    <div class="pre-order">
-                                        Pre-Order
-                                    </div>
-                                    <div class="product-price">
-                                        IDR 95.000 <span>[Disc 37%]</span>
-                                    </div>
-                                </div>
-                                <div class="mid-info">
-                                    <div class="quantity-main">
-                                        <!-- Need to add javascript function-->
-                                        Quantity:
-                                        <div class="product-qty">
-                                            <span class="qty-">-</span>
-                                            <input type="text" name="quantity" id="quantity" value="1">
-                                            <span class="qty+">+</span>
-                                        </div>
-                                        <div class="info-qty">
-                                            Min. Order : 1 pcs
-                                        </div>
-                                    </div>
-                                    <div class="current-price">
-                                        Total Current Price <br> <b>IDR 95.000</b>
-                                    </div>
-                                    <div class="nego">
-                                        Negotiate:
-                                        <div class="negotiate">
-                                            <span class="price-">-</span>
-                                            <input type="text" name="negotiate" id="negotiate" value="190.000">
-                                            <span class="price+">+</span>
-                                        </div>
-                                        <div class="nego-remain">
-                                            Negotiate Remain : 2
-                                        </div>                                                                              
-                                    </div>
-                                </div>
-                                
-                                <div class="right-info">
-                                    <div class="nego-info">
-                                        <b>Negotiation Info</b>
-                                        <div class="action-nego">
-                                            <div class="case">
-                                                Respond Seller
-                                            </div>
-                                            <div class="case">
-                                                <i class="fa-solid fa-comments-question"></i>
-                                                <a href="" class="case-discuss">Discuss</a>
-                                            </div>
-                                        </div>
-                                        <div class="respond-nego">
-                                            We apologize for rejecting your negotiations. Because the negotiated price you offer is too low. If you want to negotiate, you should contact us first to get the right price. Thank you.
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="action">
-                                    <b>Action</b>
-                                    <div class="wishlist act">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <a href="" class="link-act">Mark as Wishlist!</a>
-                                    </div>
-                                    <div class="delete act">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                        <a href="" class="link-act">Delete</a>
-                                    </div>
-                                    <div class="refresh act">
-                                        <i class="fa-sharp fa-solid fa-rotate-right"></i>
-                                        <a href="" class="link-act">Refresh Product</a>
-                                    </div>
-                                    <div class="see-product act">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <a href="" class="link-act">Visit Product</a>
-                                    </div>
-                                    <div class="help act">
-                                        <i class="fa-regular fa-circle-question"></i>
-                                        <a href="" class="link-act">Help</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="product">
-                            <input type="checkbox" name="cart" id="cart">
-                            <div class="product-img">
-                                <img src="/assets/cart/produkSepatu-2.jpg" alt="" class="img-product">
-                            </div>
-                            <div class="product-info">
-
-                                <div class="left-info">
-                                    <div class="product-name">
-                                        Joemen J 48 Original Imported Shoes Men Women Work School Sports
-                                    </div>
-                                    <div class="product-model">
-                                        [Navy] - Size 39
-                                    </div>
-                                    <div class="pre-order">
-                                        Pre-Order
-                                    </div>
-                                    <div class="product-price">
-                                        IDR 110.000 <span>[Disc 56%]</span>
-                                    </div>
-                                </div>
-
-                                <div class="mid-info">
-                                    <div class="quantity-main">
-                                        Quantity:
-                                        <div class="product-qty">
-                                            <span class="qty-">-</span>
-                                            <input type="text" name="quantity" id="quantity" value="1">
-                                            <span class="qty+">+</span>
-                                        </div>
-                                        <div class="info-qty">
-                                            Min. Order : 1 pcs
-                                        </div>
-                                    </div>
-                                    <div class="current-price">
-                                        Total Current Price <br> <span class="price-green">IDR 90.000</span>
-                                    </div>
-                                    <div class="nego">
-                                        Negotiate:
-                                        <div class="negotiate-acc">
-                                            Accepted
-                                        </div>                               
-                                    </div>
-                                </div> 
-
-                                <div class="right-info">
-                                    <div class="nego-info">
-                                        <b>Negotiation Info</b>
-                                        <div class="action-nego">
-                                            <div class="case">
-                                                Respond Seller
-                                            </div>
-                                            <div class="case">
-                                                <a href="" class="case-tq">Thank You</a>
-                                            </div>
-                                        </div>
-                                        <div class="respond-nego">
-                                            Congratulations we accept the price negotiations you offer. Don't forget to check out. Thank you.
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="action">
-                                    <b>Action</b>
-                                    <div class="wishlist act">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <a href="" class="link-act">Mark as Wishlist!</a>
-                                    </div>
-                                    <div class="delete act">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                        <a href="" class="link-act">Delete</a>
-                                    </div>
-                                    <div class="refresh act">
-                                        <i class="fa-sharp fa-solid fa-rotate-right"></i>
-                                        <a href="" class="link-act">Refresh Product</a>
-                                    </div>
-                                    <div class="see-product act">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <a href="" class="link-act">Visit Product</a>
-                                    </div>
-                                    <div class="help act">
-                                        <i class="fa-regular fa-circle-question"></i>
-                                        <a href="" class="link-act">Help</a>
-                                    </div>
-                                </div>
-
-                            </div> 
-                       </div>
-                    </div> 
-                </div>
-
-                <div class="cart-list">
-                    <div class="seller-info">
-                        <input type="checkbox" name="seller" id="seller">
-                        <div class="seller-username">
-                            StyleLiveOn
-                        </div>
-                        <div>
-                            |
-                        </div>
-                        <div class="seller-level">
-                            StyleLiveOn
-                        </div>
-                    </div>
-                    <div class="content-cart">
-                        <div class="product">
-                            <input type="checkbox" name="cart" id="cart">
-                            <div class="product-img">
-                                <img src="/assets/cart/piyama.jpg" alt="" class="img-product">
-                            </div>
-                            <div class="product-info">
-                                
-                                <div class="left-info">
-                                    <div class="product-name">
-                                        Women Style - Short Pajama Sleeve
-                                    </div>
-                                    <div class="product-model">
-                                        [All Set] - Size 40[L]
-                                    </div>
-                                    <div class="pre-order">
-                                        Pre-Order
-                                    </div>
-                                    <div class="product-price">
-                                        IDR 80.000
-                                    </div>
-                                </div>
-
-                                <div class="mid-info">
-                                    <div class="quantity-main">
-                                        Quantity:
-                                        <div class="product-qty">
-                                            <span class="qty-">-</span>
-                                            <input type="text" name="quantity" id="quantity" value="1">
-                                            <span class="qty+">+</span>
-                                        </div>
-                                        <div class="info-qty">
-                                            Min. Order : 1 pcs
-                                        </div>
-                                    </div>
-                                    <div class="current-price">
-                                        Total Current Price <br> IDR 80.000
-                                    </div>
-                                </div> 
-
-                                <div class="right-info">
-                                    <div class="nego-info">
-                                        <b>Negotiation Info</b>
-                                        <div class="respond-nego">
-                                            The seller does not accept price negotiations!
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="action">
-                                    <b>Action</b>
-                                    <div class="wishlist act">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <a href="" class="link-act">Mark as Wishlist!</a>
-                                    </div>
-                                    <div class="delete act">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                        <a href="" class="link-act">Delete</a>
-                                    </div>
-                                    <div class="refresh act">
-                                        <i class="fa-sharp fa-solid fa-rotate-right"></i>
-                                        <a href="" class="link-act">Refresh Product</a>
-                                    </div>
-                                    <div class="see-product act">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <a href="" class="link-act">Visit Product</a>
-                                    </div>
-                                    <div class="help act">
-                                        <i class="fa-regular fa-circle-question"></i>
-                                        <a href="" class="link-act">Help</a>
-                                    </div>
-                                </div>
-                            </div> 
-                       </div>
-                    </div> 
-                </div>
+      </div>
+      <hr />
+      <div class="content-main">
+        <div class="cart-all">
+          <div class="cart-list">
+            <div class="seller-info">
+              <input type="checkbox" name="seller" id="seller" checked />
+              <div class="seller-username">KanderjayaStore</div>
+              <div>|</div>
+              <div class="seller-level">Super-Seller</div>
             </div>
+            <div class="content-cart">
+              <div class="product">
+                <input type="checkbox" name="cart" id="cart" checked />
+                <div class="product-img">
+                  <img
+                    src="/assets/cart/produkJeans-1.jpg"
+                    alt=""
+                    class="img-product"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="left-info">
+                    <div class="product-name">
+                      DENIM - JIMMY AND MARTIN JEANS
+                    </div>
+                    <div class="product-model">[OG801-2] - Size 27</div>
+                    <div class="product-price">
+                      <br />Total Current Price: <br />
+                      <b>IDR 199.500</b>
+                      <span>[Disc. 50%]</span>
+                    </div>
+                  </div>
+
+                  <div class="mid-info">
+                    <div class="quantity-main">
+                      Quantity:
+                      <div class="product-qty">
+                        <button class="subtract">-</button>
+                        <input
+                          type="text"
+                          value="1"
+                          class="quantity"
+                          disabled
+                        />
+                        <button class="add">+</button>
+                      </div>
+                      <div class="info-qty">Min. Order : 1 pcs</div>
+                    </div>
+                    <div class="nego">
+                      Negotiate:
+                      <div class="negotiate">
+                        <input
+                          type="text"
+                          name="negotiate"
+                          id="negotiate"
+                          value="190.000"
+                        />
+                      </div>
+                      <div class="nego-remain">Nego Remain: 3</div>
+                      <div class="negotiate-act">
+                        <a href="">Negotiate Product</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right-info">
+                    <div class="nego-info">
+                      <b>Negotiation Info</b>
+                      <div class="respond-nego">Negotiation Not Found</div>
+                    </div>
+                  </div>
+
+                  <div class="action">
+                    <b>Action</b>
+                    <div class="wishlist act">
+                      <i class="fa-regular fa-heart"></i>
+                      <a href="" class="link-act">Mark as Wishlist!</a>
+                    </div>
+                    <div class="delete act">
+                      <i class="fa-solid fa-trash-can"></i>
+                      <a href="" class="link-act">Remove</a>
+                    </div>
+                    <div class="help act">
+                      <i class="fa-regular fa-comment"></i>
+                      <a href="" class="link-act">Discuss</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product">
+                <input type="checkbox" name="cart" id="cart" checked />
+                <div class="product-img">
+                  <img
+                    src="/assets/cart/produkJeans-2.jpg"
+                    alt=""
+                    class="img-product"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="left-info">
+                    <div class="product-name">
+                      DENIM - JIMMY AND MARTIN JEANS
+                    </div>
+                    <div class="product-model">[OG600-2] - Size 30</div>
+                    <div class="product-price">
+                      <br />Total Current Price: <br />
+                      <b>IDR 214.950</b>
+                      <span>[Disc. 50%]</span>
+                    </div>
+                  </div>
+
+                  <div class="mid-info">
+                    <div class="quantity-main">
+                      Quantity:
+                      <div class="product-qty">
+                        <button class="subtract">-</button>
+                        <input
+                          type="text"
+                          value="1"
+                          class="quantity"
+                          disabled
+                        />
+                        <button class="add">+</button>
+                      </div>
+                      <div class="info-qty">Min. Order : 1 pcs</div>
+                    </div>
+                  </div>
+
+                  <div class="right-info">
+                    <div class="nego-info">
+                      <b>Negotiation Info</b>
+                      <div class="action-nego">
+                        <div class="case">Respond Seller</div>
+                        <div class="case-close case">Close</div>
+                      </div>
+                      <div class="respond-nego">
+                        We apologize to the customer. For the price of the
+                        product <i>DENIM - JIMMY AND MARTIN JEANS</i> is net.
+                        Thank you.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="action">
+                    <b>Action</b>
+                    <div class="wishlist act">
+                      <i class="fa-regular fa-heart"></i>
+                      <a href="" class="link-act">Mark as Wishlist!</a>
+                    </div>
+                    <div class="delete act">
+                      <i class="fa-solid fa-trash-can"></i>
+                      <a href="" class="link-act">Remove</a>
+                    </div>
+                    <div class="help act">
+                      <i class="fa-regular fa-comment"></i>
+                      <a href="" class="link-act">Discuss</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price-info">
+              <div class="total-price">
+                <div class="head-price">Summary Price</div>
+                <div class="price-list">
+                  <div class="price-org">
+                    <div class="price-org">Best Deal Price : IDR 414.900</div>
+                    <div class="confirm">
+                      <div class="confirm-original">Original</div>
+                      <div class="confirm-bestPrice">Best Price</div>
+                    </div>
+                  </div>
+                  <div class="promo-code">
+                    <b>Promo Code</b>
+                    <div>
+                      <input
+                        type="text"
+                        name="promo"
+                        id="promo"
+                        placeholder="Insert Promo Code Here!"
+                      />
+                      <button>Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="confirm-seller">
+                <a href="">Check Out</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-list">
+            <div class="seller-info">
+              <input type="checkbox" name="seller" id="seller" />
+              <div class="seller-username">KerizuJPN</div>
+              <div>|</div>
+              <div class="seller-level">Official Store</div>
+            </div>
+            <div class="content-cart">
+              <div class="product">
+                <input type="checkbox" name="cart" id="cart" />
+                <div class="product-img">
+                  <img
+                    src="/assets/cart/produkSepatu-1.jpg"
+                    alt=""
+                    class="img-product"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="left-info">
+                    <div class="product-name">
+                      Joemen J 49 Original Imported Shoes Men Women Work School
+                      Sports
+                    </div>
+                    <div class="product-model">[Black-Red] - Size 39</div>
+                    <div class="pre-order">Pre-Order</div>
+                    <div class="product-price">
+                      <br />Total Current Price: <br />
+                      <b>IDR 95.000</b>
+                      <span>[Disc. 37%]</span>
+                    </div>
+                  </div>
+                  <div class="mid-info">
+                    <div class="quantity-main">
+                      Quantity:
+                      <div class="product-qty">
+                        <button class="subtract">-</button>
+                        <input
+                          type="text"
+                          value="1"
+                          class="quantity"
+                          disabled
+                        />
+                        <button class="add">+</button>
+                      </div>
+                      <div class="info-qty">Min. Order : 1 pcs</div>
+                    </div>
+                    <div class="nego">
+                      Negotiate:
+                      <div class="negotiate">
+                        <input
+                          type="text"
+                          name="negotiate"
+                          id="negotiate"
+                          value="95.000"
+                        />
+                      </div>
+                      <div class="nego-remain">Nego Remain : 2</div>
+                      <div class="negotiate-act">
+                        <a href="">Negotiate Product</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right-info">
+                    <div class="nego-info">
+                      <b>Negotiation Info</b>
+                      <div class="action-nego">
+                        <div class="case">Respond Seller</div>
+                        <div class="case">
+                          <a href="" class="case-discuss">Open</a>
+                        </div>
+                      </div>
+                      <div class="respond-nego">
+                        We apologize for rejecting your negotiations. Because
+                        the negotiated price you offer is too low. If you want
+                        to negotiate, you should contact us first to get the
+                        right price. Thank you.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="action">
+                    <b>Action</b>
+                    <div class="wishlist act">
+                      <i class="fa-regular fa-heart"></i>
+                      <a href="" class="link-act">Mark as Wishlist!</a>
+                    </div>
+                    <div class="delete act">
+                      <i class="fa-solid fa-trash-can"></i>
+                      <a href="" class="link-act">Remove</a>
+                    </div>
+                    <div class="help act">
+                      <i class="fa-regular fa-comment"></i>
+                      <a href="" class="link-act">Discuss</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product">
+                <input type="checkbox" name="cart" id="cart" />
+                <div class="product-img">
+                  <img
+                    src="/assets/cart/produkSepatu-2.jpg"
+                    alt=""
+                    class="img-product"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="left-info">
+                    <div class="product-name">
+                      Joemen J 48 Original Imported Shoes Men Women Work School
+                      Sports
+                    </div>
+                    <div class="product-model">[Navy] - Size 39</div>
+                    <div class="pre-order">Pre-Order</div>
+                    <div class="product-price">
+                      <br />Total Current Price: <br />
+                      <div class="price-green">
+                        <b>IDR 90.000</b>
+                        <span>[Disc. 56%] + Negotiation Price</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mid-info">
+                    <div class="quantity-main">
+                      Quantity:
+                      <div class="product-qty">
+                        <button class="subtract">-</button>
+                        <input
+                          type="text"
+                          value="1"
+                          class="quantity"
+                          disabled
+                        />
+                        <button class="add">+</button>
+                      </div>
+                      <div class="info-qty">Min. Order : 1 pcs</div>
+                    </div>
+                    <div class="nego">
+                      Negotiate:
+                      <div class="negotiate-acc">Accepted</div>
+                    </div>
+                  </div>
+
+                  <div class="right-info">
+                    <div class="nego-info">
+                      <b>Negotiation Info</b>
+                      <div class="action-nego">
+                        <div class="case">Respond Seller</div>
+                        <div class="case">
+                          <a href="" class="case-tq">Thank You</a>
+                        </div>
+                      </div>
+                      <div class="respond-nego">
+                        Congratulations we accept the price negotiations you
+                        offer. Don't forget to check out. Thank you.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="action">
+                    <b>Action</b>
+                    <div class="wishlist act">
+                      <i class="fa-regular fa-heart"></i>
+                      <a href="" class="link-act">Mark as Wishlist!</a>
+                    </div>
+                    <div class="delete act">
+                      <i class="fa-solid fa-trash-can"></i>
+                      <a href="" class="link-act">Remove</a>
+                    </div>
+                    <div class="help act">
+                      <i class="fa-regular fa-comment"></i>
+                      <a href="" class="link-act">Discuss</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-list">
+            <div class="seller-info">
+              <input type="checkbox" name="seller" id="seller" />
+              <div class="seller-username">StyleLiveOn</div>
+              <div>|</div>
+              <div class="seller-level">StyleLiveOn</div>
+            </div>
+            <div class="content-cart">
+              <div class="product">
+                <input type="checkbox" name="cart" id="cart" />
+                <div class="product-img">
+                  <img
+                    src="/assets/cart/piyama.jpg"
+                    alt=""
+                    class="img-product"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="left-info">
+                    <div class="product-name">
+                      Women Style - Short Pajama Sleeve
+                    </div>
+                    <div class="product-model">[All Set] - Size 40[L]</div>
+                    <div class="pre-order">Pre-Order</div>
+                    <div class="product-price">
+                      <br />Total Current Price: <br />
+                      <b>IDR 80.000</b>
+                    </div>
+                  </div>
+
+                  <div class="mid-info">
+                    <div class="quantity-main">
+                      Quantity:
+                      <div class="product-qty">
+                        <button class="subtract">-</button>
+                        <input
+                          type="text"
+                          value="1"
+                          class="quantity"
+                          disabled
+                        />
+                        <button class="add">+</button>
+                      </div>
+                      <div class="info-qty">Min. Order : 1 pcs</div>
+                    </div>
+                  </div>
+
+                  <div class="right-info">
+                    <div class="nego-info">
+                      <b>Negotiation Info</b>
+                      <div class="respond-nego">
+                        The seller does not accept price negotiations!
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="action">
+                    <b>Action</b>
+                    <div class="wishlist act">
+                      <i class="fa-regular fa-heart"></i>
+                      <a href="" class="link-act">Mark as Wishlist!</a>
+                    </div>
+                    <div class="delete act">
+                      <i class="fa-solid fa-trash-can"></i>
+                      <a href="" class="link-act">Remove</a>
+                    </div>
+                    <div class="help act">
+                      <i class="fa-regular fa-comment"></i>
+                      <a href="" class="link-act">Discuss</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="footer">
-        <div class="social-links">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-        <div class="copyright">
-            Copyright &copy; 2022 BeliSkuy. All Rights Reserved.
-        </div>
-    </div>
-
-</body>
+      <div class="social-links">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="copyright">
+          Copyright &copy; 2022 BeliSkuy. All Rights Reserved.
+      </div>
+  </div>
 </html>
-
-
+<script src="/js/cart.js"></script>
