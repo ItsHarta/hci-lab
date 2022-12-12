@@ -1,33 +1,47 @@
-.main-content{
-    display: flex;
-    flex-direction: row;
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.profile-pic{
-    margin: 20px;
+a {
+  text-decoration: none;
 }
 
-.choose{
-    text-align: center;
-    margin: 20px;
+.profile-pic {
+  margin: 1.25rem;
 }
 
-.note{
-    text-align: justify;
+#image {
+  display: none;
 }
 
-.border-img{
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    margin: 20px;
+.user-img:hover {
+  opacity: 0.5;
 }
 
-.border-img > img{
-    border-radius: 50%;
-    max-width: 50%;
-    max-height: 50%;
-    object-fit: cover;
+.choose {
+  text-align: center;
+  margin: 1.25rem;
+}
+
+.note {
+  text-align: justify;
+}
+
+.border-img {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem;
+}
+
+.border-img > img {
+  border-radius: 50%;
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: cover;
 }
 
 /* .level-user{
@@ -35,75 +49,151 @@
     color: #0275d8;;
 } */
 
-.head-content{
-    margin: 20px;
-    font-weight: bold;
-    font-size: 30px;
+.head-content {
+  margin: 1.25rem;
+  font-weight: bold;
+  font-size: 30px;
 }
 
-.info>div{
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
+.info > div {
+  display: flex;
+  flex-direction: row;
+  margin: 1.25rem;
 }
 
-.info{
-    display: flex;
-    flex-direction: row;
+.info {
+  display: flex;
+  flex-direction: row;
 }
 
-.info-head{
-    width: 120px;
+.info-head {
+  width: 7.5rem;
 }
 
-.value > input{
-    width: 200px;
+.value > input {
+  width: 8rem;
 }
 
-.value-email{
-    width: 200px;
+.value > select {
+  text-align: center;
+  width: 8rem;
 }
 
-.change{
-    margin-left: 10px;
+.value-email {
+  width: 10.5rem;
 }
 
-.option-gender{
-    position: absolute;
-    transform: scaleY(0);
-    transition: transform 500ms;
-    transform-origin:left;
+#show {
+  padding: 0rem 2rem;
 }
 
-/* .verify{
-    margin-left: 20px;
-} */
+#hide {
+  display: none;
+  padding: 0rem 2rem;
+}
 
-.change-gender:hover .option-gender{
-    transform: scaleY(1);
+.change {
+  margin-left: 0.625rem;
+}
+
+.button-change {
+  width: 4rem;
+}
+
+.button-change > a {
+  padding: 0.45rem;
+  text-align: center;
+  color: #0275d8;
+}
+
+.button-change:hover > a {
+  background-color: #0275d8;
+  border-radius: 15px;
+  color: white;
+}
+
+.option-gender {
+  position: absolute;
+  transform: scaleY(0);
+  transition: transform 500ms;
+  transform-origin: left;
+}
+
+.list-gender {
+  display: flex;
+  flex-direction: row;
+}
+
+.verify-number {
+  color: #0275d8;
+}
+
+.verify:hover > a {
+  background-color: #7caa2d;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+
+.change-gender:hover .option-gender {
+  padding-top: 1rem;
+  transform: scaleY(1);
 }
 
 .verify > div {
-    font-weight: bold;
-    color: white;
-    border-radius: 15px;
-    padding: 0px 10px;
-    background-color: #0275d8;
+  font-weight: bold;
+  color: white;
+  border-radius: 0.938rem;
+  padding: 0rem 0.625rem;
+  background-color: #0275d8;
 }
 
-@media (max-width:480px){
-    .main-content{
-        display: flex;
-        flex-direction: column;
-    }
+.contact {
+  height: 23.6rem;
+}
 
-    .info>div{
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-    }
+.option-email {
+  display: none;
+}
 
-    .info-head{
-        font-weight: bold;
-    }
+.option-email-normal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .info > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.25rem;
+  }
+  .option-email-normal {
+    display: none;
+  }
+  .option-email {
+    display: flex;
+  }
+  #show {
+    padding-left: 0rem;
+  }
+  #hide {
+    padding-left: 0rem;
+  }
+  .value {
+    display: block;
+  }
+  .info-head {
+    font-weight: bold;
+  }
 }
