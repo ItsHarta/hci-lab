@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
+  /* width: 30%; */
   margin: 1.25rem;
 }
 
@@ -311,7 +311,22 @@
   color: #0275d8;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  .nego-info {
+    display: none;
+  }
+  .price-list {
+    width: 35rem;
+  }
+  .product > div {
+    margin: 0;
+  }
+  .product-info > div {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
   body {
     width: fit-content;
   }
