@@ -1,197 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeliSkuy</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/profile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-</head>
-<body>
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="header">
-        <div class="header-title">
-            <img src="assets/icon.png" alt="BeliSkuy" width="44px">
-            <span class="title">BeliSkuy</span>
-        </div>
-        <nav>
-            <ul>
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                <div class="nav-items">
-                    <li><a class="menu" href="index.html">Home</a></li>
-                    <li><a class="menu" href="chat.html">Chat</a></li>
-                    <li><a class="menu" href="cart.html">Cart</a></li>
-                    <li><a class="menu-btn" href="/profile.html">Profile</a></li>
-                </div>
-            </ul>
-        </nav>
+      <div class="header-title">
+        <img src="assets/icon.png" alt="BeliSkuy" width="44px" />
+        <span class="title">BeliSkuy</span>
+      </div>
+      <nav>
+        <ul>
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="nav-items">
+            <li><a class="menu" href="index.html">Home</a></li>
+            <li><a class="menu" href="chat.html">Chat</a></li>
+            <li><a class="menu" href="cart.html">Cart</a></li>
+            <li><a class="menu-btn" href="/profile.html">Profile</a></li>
+          </div>
+        </ul>
+      </nav>
     </div>
-    
+
     <div class="main-content">
-        <div class="Biodata User">
-            <div class="profile head-content">
-                Profile Information
-            </div>
-
-            <div class="profile-pic">
-                <div class="border-img">
-                    <img src="/assets/chat/Seller 5.jpg" alt="" class="user-img">
-                </div>
-                <div class="choose">
-                    <input type="file" name="image" id="image" accept=".png ,.jpg">
-                    <!-- <button>Choose Image</button> -->
-                </div>
-                <div class="note-1 note">
-                    Maximum Profile Photo Size : 1024kb
-                </div>
-                <div class="note-2 note">
-                    Acceptable photo extensions : PNG or JPG
-                </div>
-            </div>    
+      <div class="Biodata User">
+        <div class="profile head-content">Profile Information</div>
+        <div class="profile-pic">
+          <div class="border-img">
+            <img src="/assets/chat/Seller 5.jpg" alt="" class="user-img" />
+          </div>
+          <div class="choose">
+            <input type="file" name="image" id="image" accept=".png ,.jpg" />
+          </div>
+          <div class="note-1 note">
+            Maximum Profile Photo Size : <b>1024kb</b>
+          </div>
+          <div class="note-2 note">
+            Acceptable photo extensions : <b>PNG or JPG</b>
+          </div>
         </div>
-        
-        <div class="general-information">
-            <div class="general-info head-content">
-                General Information
-            </div>
-            <div class="id info">
-                <div>
-                    <div class="info-head">
-                        ID
-                    </div>
-                    <div class="value">
-                        2440016546
-                    </div>
-                </div>
-            </div>
+      </div>
 
-            <!-- <div class="level-user">
-                Official Store
-            </div> -->
-
-            <div class="username info">
-                <div>
-                    <div class="info-head">
-                        Username
-                    </div>
-                    <div class="value">
-                        <input type="text" name="username" id="" value="ivan0187">
-                    </div>
-                </div>
-                <div class="change">
-                    <a href="">Change</a>
-                </div>
+      <div class="general-information">
+        <div class="general-info head-content">General Information</div>
+        <div class="id info">
+          <div>
+            <div class="info-head">
+              <i class="fa-solid fa-id-card-clip"></i>
+              ID
             </div>
-
-            <div class="dob info">
-                <div>
-                    <div class="info-head">
-                        Date of Birth
-                    </div>
-                    <div class="value">
-                        <input type="date" name="dob" id="" value="2002-08-17">
-                    </div>
-                </div>
-                <div class="change">
-                    <a href="">Change</a>
-                </div>
-            </div>
-
-            <div class="gender info">
-                <div>
-                    <div class="info-head">
-                        Gender
-                    </div>
-                    <div class="value">
-                        <input type="text" name="gender" id="" value="Male">
-                    </div>
-                </div>
-                <div class="change-gender change">
-                    Change
-                    <div class="option-gender">
-                        <a href="">
-                            <option value="male" selected>Male</option>
-                        </a>
-                        <a href="">
-                            <option value="female">Female</option>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="city info">
-                <div>
-                    <div class="info-head">
-                        City
-                    </div>
-                    <div class="value">
-                        <input type="text" name="city" id="" value="Jakarta">
-                    </div>
-                </div>
-                <div class="change">
-                    <a href="">Change</a>
-                </div>
-            </div>
+            <div class="value">2440016546</div>
+          </div>
         </div>
 
-
-        <div class="contact">
-            <div class="head-content">
-                Contact Information
+        <div class="username info">
+          <div>
+            <div class="info-head">
+              <i class="fa-solid fa-user"></i> Username
             </div>
-                        
-            <div class="email info">
-                <div>
-                    <div class="info-head">
-                        Email
-                    </div>
-                    <div class="value">
-                        <div class="value-email">ivan0*****@*****.ac.id</div>
-                    </div>
-                </div>
-                <div>
-                    <div class="verify">
-                        <div>
-                            Verified
-                        </div>
-                    </div>
-                    <div class="change">
-                        <a href="">Change</a>
-                    </div>
-                </div>
+            <div class="value">
+              <input type="text" name="username" id="" value="ivan0187" />
             </div>
-
-            <div class="number info">
-                <div>
-                    <div class="info-head">
-                        Number
-                    </div>
-                    <div class="value">
-                        <input type="text" name="" id="" placeholder="Insert Number Phone">
-                    </div>
-                </div>
-                <div class="verify change">
-                    <a href="">Verify Number</a>
-                </div>
+            <div class="change">
+              <div class="button-change">
+                <a href="">Change</a>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="dob info">
+          <div>
+            <div class="info-head">
+              <i class="fa-solid fa-cake-candles"></i> Date of Birth
+            </div>
+            <div class="value">
+              <input type="date" name="dob" id="" value="2002-08-17" />
+            </div>
+            <div class="change">
+              <div class="button-change">
+                <a href="">Change</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gender info">
+          <div>
+            <div class="info-head">
+              <i class="fa-solid fa-venus-mars"></i> Gender
+            </div>
+            <div class="value">
+              <select name="gender" id="">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+              </select>
+              <!-- <input type="text" name="gender" id="" value="Male" /> -->
+            </div>
+            <div class="change-gender change">
+              <div class="">
+                <div class="button-change">
+                  <a href="">Change</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="city info">
+          <div>
+            <div class="info-head"><i class="fa-solid fa-city"></i> City</div>
+            <div class="value">
+              <input type="text" name="city" id="" value="Jakarta" />
+            </div>
+            <div class="change">
+              <div class="button-change">
+                <a href="">Change</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="general-info head-content">Contact Information</div>
+        <div class="email info">
+          <div>
+            <div class="info-head">
+              <i class="fa-solid fa-envelope"></i> Email
+            </div>
+            <div class="value">
+              <div class="value-email" id="value-email">
+                ivan0*****@*****.ac.id
+                <div class="option-email">
+                  <i class="fa-solid fa-eye" onclick="show()" id="show"></i>
+                  <i
+                    class="fa-solid fa-eye-slash"
+                    onclick="hide()"
+                    id="hide"
+                  ></i>
+                  <div class="verify">
+                    <div>Verified</div>
+                  </div>
+                  <div class="change">
+                    <div class="button-change">
+                      <a href="">Change</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="option-email-normal">
+              <i class="fa-solid fa-eye" onclick="show()" id="show"></i>
+              <i class="fa-solid fa-eye-slash" onclick="hide()" id="hide"></i>
+              <div class="verify">
+                <div>Verified</div>
+              </div>
+              <div class="change">
+                <div class="button-change">
+                  <a href="">Change</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="number info">
+          <div>
+            <div class="info-head">
+              <i class="fa-solid fa-phone"></i> Number
+            </div>
+            <div class="value">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Insert Number Phone"
+              />
+            </div>
+            <div class="verify change">
+              <a href="" class="verify-number">Verify Number</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="footer">
-        <div class="social-links">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-        <div class="copyright">
-            Copyright &copy; 2022 BeliSkuy. All Rights Reserved.
-        </div>
+      <div class="social-links">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="copyright">
+        Copyright &copy; 2022 BeliSkuy. All Rights Reserved.
+      </div>
     </div>
-
-</body>
+  </body>
+  <script src="./js/profile.js"></script>
 </html>
-
-
