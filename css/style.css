@@ -1,3 +1,6 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .clear {
     clear: both;
 }
@@ -80,6 +83,59 @@ li:hover .dropdown {
     display: none;
     font-size: 24px;
     user-select: none;
+}
+
+.container {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 14px 34px;
+    margin: 44px 0;
+}
+
+.container-header {
+    max-width: 1050px;
+    margin: 0.5rem auto;
+    font-size: 1.25rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.heavy {
+    font-weight: bolder;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.medium {
+    font-size: 1.25rem;
+}
+
+.big {
+    font-size: 1.88rem;
+}
+
+.large {
+    font-size: 2.5rem;
+}
+
+.huge {
+    font-size: 3.33rem;
+}
+
+.red { 
+    color: #cd1f25;
+}
+
+.blue {
+    color: #0275d8;
+}
+
+.white {
+    color: #fff;
 }
 
 .footer {
