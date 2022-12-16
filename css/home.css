@@ -1,6 +1,10 @@
 .content {
     margin-top: 2rem;
-    padding: 0 10% 10% 10%;
+    margin: 2.5% 10% 10% 10%;
+}
+
+.slider-container {
+    padding: 1.75% 0;
     min-height: 350px;
     display: flex;
     flex-direction: row;
