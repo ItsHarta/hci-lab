@@ -1,132 +1,207 @@
 .global-chat{
-    border: #0275d8 solid 1px;
+    /* border: #0275d8 solid 1px; */
     height: 100%;
-    width: 7000px;
-    width: 3000px;
-}
-
-.lasted-chat{
+    width: 437.5rem;
+    width: 187.5rem;
+  }
+  
+  .lasted-chat{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-}
-
-.status{
+  }
+  
+  .status{
     font-weight: bold;
-}
-
-.chat{
-    margin-left: 30px;
-}
-
-.last_chat{
+  }
+  
+  .chat{
+    margin-left: 1.875rem;
+  }
+  
+  .last_chat{
     text-align: right;
-    margin-right: 20px;
-}
-
-.info-chat{
+    margin-right: 1.25rem;
+  }
+  
+  .info-chat{
     /* border: #0275d8 solid 1px; */
-    margin-left: 20px;
-}
-
-.info-chat:hover{
+    margin-left: 1.25rem;
+  }
+  
+  .info-chat:hover{
     background-color: #71bdffe3;
-    border-radius: 20px;
-}
-
-.selected-user{
+    border-radius: 1.5rem;
+  }
+  
+  .selected-user{
     background-color: #71bdffe3;
-    border-radius: 20px;
-}
-
-.content > h3 {
+    border-radius: 1.25rem;
+  }
+  
+  .content > h3{
     text-align: left;
-}
-
-.user{
-    width: 100px;
-    height: 100px;
+  }
+  
+  .user{
+    width: 6.25rem;
+    height: 6.25rem;
     border-radius: 50%;
-}
-
-.online{
+  }
+  
+  .online{
     font-weight: bold;
-    color:#0275d8;
-}
-
-.profile_name{
+    color: #0275d8;
+  }
+  
+  .profile_name{
     text-align: left;
     font-weight: bolder;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.chat_customer{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+  
+  .chat_customer{
     text-align: right;
-}
-
-.read{
-    color:#0275d8;
+  }
+  
+  .read{
+    color: #0275d8;
     font-weight: bold;
-}
-
-.message_system{
+  }
+  
+  .message_system{
     font-style: italic;
-}
-
-.profile_chat{
+  }
+  
+  .profile_chat{
     position: sticky;
     top: 0;
-    width: 500px;
+    width: 31.25rem;
     background-color: white;
     /* height: 200px; */
-}
-
-.chat_customer{
-    margin: 20px;
-}
-
-.profile_chat_info{
+  }
+  
+  .chat_customer{
+    margin: 1.25rem;
+  }
+  
+  .profile_chat_info{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.main-chat{
+    justify-content: flex-start;
+  }
+  
+  .main-chat{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-}
-
-.chat_active{
-    margin-left: 20px;
+    align-items: center;
+  }
+  
+  .chat_active{
+    margin-left: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 800px;
-}
-
-.position{
+    width: 50rem;
+  }
+  
+  .chat-active-mobile{
+    display: none;
+  }
+  
+  .position{
     color: white;
     font-weight: bold;
     text-align: center;
-}
-
-.border-seller{
+  }
+  
+  .border-seller{
     background-color: #0275d8;
     border-radius: 25%;
-    width: 50px;
-}
-
-.history_chat{
-    width: 500px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.reply_user{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+    width: 3.125rem;
+  }
+  
+  .history_chat{
+    width: 31.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .reply_user{
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  textarea{
+    height: 45px;
+    width: 440px;
+  }
+  
+  @media screen and (max-width: 768px){
+    body{
+      width: fit-content;
+    }
+    .global-chat{
+      width: auto;
+      height: auto;
+    }
+    .chat{
+      display: none;
+    }
+    .last_chat{
+      display: none;
+    }
+    .chat_active{
+      width: 32rem;
+    }
+  }
+  
+  @media screen and (max-width: 485px){
+    body{
+      width: fit-content;
+    }
+    .global-chat{
+      width: auto;
+      height: auto;
+    }
+    .chat_active{
+      position: absolute;
+      transform: scaleY(0);
+    }
+    .chat-active-mobile{
+      display: block;
+    }
+    .history_chat{
+      width: 480px;
+    }
+    .chat{
+      display: none;
+    }
+    .info-chat{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .info_seller{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .name{
+      margin: 2rem;
+    }
+    .status{
+      margin: auto;
+      text-align: right;
+    }
+    .last_chat{
+      display: none;
+    }
+  }
