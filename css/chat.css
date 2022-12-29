@@ -5,6 +5,56 @@
   width: 187.5rem;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.chat-head {
+  margin: 10px 10px;
+  padding: 10px 14px;
+}
+
+.search-box {
+  border: 1px solid lightgray;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  margin: 10px 10px;
+}
+
+.search-box > i {
+  font-size: 20px;
+  color: #777;
+}
+
+.search-box > input {
+  flex: 1;
+  height: 20px;
+  border: none;
+  outline: none;
+  padding-left: 12px;
+  font-size: 1.1rem;
+}
+
+.search-box > .separator {
+  border-left: 1px solid lightgray;
+  max-width: 1px;
+  height: 30px;
+  margin: 0 1rem;
+}
+
+.search-box > .search-icon {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  color: #bababa;
+}
+
 .lasted-chat {
   display: flex;
   flex-direction: row;
@@ -40,14 +90,15 @@
   border-radius: 1.25rem;
 }
 
-.content > h3 {
-  text-align: left;
-}
-
 .user {
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%;
+}
+
+.active {
+  width: 6.25rem;
+  text-align: center;
 }
 
 .online {
@@ -122,8 +173,8 @@
 
 .border-seller {
   background-color: #0275d8;
-  border-radius: 25%;
-  width: 3.125rem;
+  border-radius: 50px;
+  width: 6.5rem;
 }
 
 .history_chat {
