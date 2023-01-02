@@ -163,6 +163,41 @@ a {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .info > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.25rem;
+  }
+  .option-email-normal {
+    display: none;
+  }
+  .option-email {
+    display: flex;
+  }
+  #show {
+    padding-left: 0rem;
+  }
+  #hide {
+    padding-left: 0rem;
+  }
+  .value {
+    display: block;
+  }
+  .info-head {
+    font-weight: bold;
+  }
+}
+
 @media (max-width: 480px) {
   .main-content {
     display: flex;
