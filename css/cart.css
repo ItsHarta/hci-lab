@@ -1,15 +1,10 @@
 .content-head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  /* width: 30%; */
-  margin: 1.25rem;
+  margin: 10px 10px;
+  padding: 10px 14px;
 }
 
 .cart-head {
   font-weight: bolder;
-  font-size: 23px;
 }
 
 .seller-info {
