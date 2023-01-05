@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
+
   <body>
     <div class="header">
       <div class="header-title">
@@ -21,9 +22,15 @@
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <div class="nav-items">
-            <li><a class="menu" href="index.html">Home</a></li>
-            <li><a class="menu" href="chat.html">Chat</a></li>
-            <li><a class="menu" href="cart.html">Cart</a></li>
+            <li><a class="menu" href="index.html">Home </a></li>
+            <li>
+              <a class="menu" href="chat.html">Chat </a>
+              <span class="small notification notification-border">5</span>
+            </li>
+            <li>
+              <a class="menu" href="cart.html">Cart </a>
+              <span class="small notification notification-border">5</span>
+            </li>
             <li><a class="menu-btn" href="/profile.html">Profile</a></li>
           </div>
         </ul>
@@ -32,13 +39,8 @@
 
     <div class="content">
       <div class="content-head">
-        <div class="cart-head">Cart</div>
-        <!-- <div class="Remove All">
-                <input type="checkbox" name="all" id="all">
-                <label for="all">Select All</label>
-            </div> -->
+        <div class="big cart-head">Cart</div>
       </div>
-      <hr />
       <div class="content-main">
         <div class="cart-all">
           <div class="cart-list">
@@ -47,7 +49,12 @@
               <div class="seller-username">KanderjayaStore</div>
               <div>|</div>
               <div class="seller-level">Super-Seller</div>
+              <div class="confirm-seller">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                <a href="">Check Out</a>
+              </div>
             </div>
+
             <div class="content-cart">
               <div class="product">
                 <input type="checkbox" name="cart" id="cart" checked />
@@ -114,15 +121,15 @@
                     <b>Action</b>
                     <div class="wishlist act">
                       <i class="fa-regular fa-heart"></i>
-                      <a href="" class="link-act">Mark as Wishlist!</a>
+                      <a href="#" class="link-act">Mark as Wishlist!</a>
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="" class="link-act">Remove</a>
+                      <a href="#" class="link-act remove">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
-                      <a href="" class="link-act">Discuss</a>
+                      <a href="#" class="link-act">Discuss</a>
                     </div>
                   </div>
                 </div>
@@ -186,22 +193,22 @@
                     <b>Action</b>
                     <div class="wishlist act">
                       <i class="fa-regular fa-heart"></i>
-                      <a href="" class="link-act">Mark as Wishlist!</a>
+                      <a href="#" class="link-act">Mark as Wishlist!</a>
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="" class="link-act">Remove</a>
+                      <a href="#" class="link-act remove">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
-                      <a href="" class="link-act">Discuss</a>
+                      <a href="#" class="link-act">Discuss</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="price-info">
+            <!-- <div class="price-info">
               <div class="total-price">
                 <div class="head-price">Summary Price</div>
                 <div class="price-list">
@@ -230,7 +237,7 @@
                 <a href="">Check Out</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="cart-list">
             <div class="seller-info">
@@ -238,6 +245,10 @@
               <div class="seller-username">KerizuJPN</div>
               <div>|</div>
               <div class="seller-level">Official Store</div>
+              <div class="confirm-seller">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                <a href="">Check Out</a>
+              </div>
             </div>
             <div class="content-cart">
               <div class="product">
@@ -317,15 +328,15 @@
                     <b>Action</b>
                     <div class="wishlist act">
                       <i class="fa-regular fa-heart"></i>
-                      <a href="" class="link-act">Mark as Wishlist!</a>
+                      <a href="#" class="link-act">Mark as Wishlist!</a>
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="" class="link-act">Remove</a>
+                      <a href="#" class="link-act remove">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
-                      <a href="" class="link-act">Discuss</a>
+                      <a href="#" class="link-act">Discuss</a>
                     </div>
                   </div>
                 </div>
@@ -350,10 +361,8 @@
                     <div class="pre-order">Pre-Order</div>
                     <div class="product-price">
                       <br />Total Current Price: <br />
-                      <div class="price-green">
-                        <b>IDR 90.000</b>
-                        <span>[Disc. 56%] + Negotiation Price</span>
-                      </div>
+                        <b class="price-green">IDR 90.000</b>
+                        <span>[Disc. 56%]</span> + Negotiation Price Applied
                     </div>
                   </div>
 
@@ -398,15 +407,15 @@
                     <b>Action</b>
                     <div class="wishlist act">
                       <i class="fa-regular fa-heart"></i>
-                      <a href="" class="link-act">Mark as Wishlist!</a>
+                      <a href="#" class="link-act">Mark as Wishlist!</a>
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="" class="link-act">Remove</a>
+                      <a href="#" class="link-act remove">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
-                      <a href="" class="link-act">Discuss</a>
+                      <a href="#" class="link-act">Discuss</a>
                     </div>
                   </div>
                 </div>
@@ -420,6 +429,10 @@
               <div class="seller-username">StyleLiveOn</div>
               <div>|</div>
               <div class="seller-level">StyleLiveOn</div>
+              <div class="confirm-seller">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                <a href="">Check Out</a>
+              </div>
             </div>
             <div class="content-cart">
               <div class="product">
@@ -474,15 +487,15 @@
                     <b>Action</b>
                     <div class="wishlist act">
                       <i class="fa-regular fa-heart"></i>
-                      <a href="" class="link-act">Mark as Wishlist!</a>
+                      <a href="#" class="link-act">Mark as Wishlist!</a>
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="" class="link-act">Remove</a>
+                      <a href="#" class="link-act remove">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
-                      <a href="" class="link-act">Discuss</a>
+                      <a href="#" class="link-act">Discuss</a>
                     </div>
                   </div>
                 </div>
@@ -502,6 +515,6 @@
       <div class="copyright">
           Copyright &copy; 2022 BeliSkuy. All Rights Reserved.
       </div>
-  </div>
+    </div>
 </html>
 <script src="/js/cart.js"></script>

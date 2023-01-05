@@ -26,3 +26,10 @@ $(".add").click(function () {
     quantity = quantity + newQuantity;
   }
 });
+
+//Function to Delete Item
+$(".remove").click(function () {
+  $delete = $(this).closest(".product");
+  $delete.remove();
+});
+

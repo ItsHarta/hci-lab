@@ -26,9 +26,15 @@
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <div class="nav-items">
-            <li><a class="menu" href="index.html">Home</a></li>
-            <li><a class="menu" href="chat.html">Chat</a></li>
-            <li><a class="menu" href="cart.html">Cart</a></li>
+            <li><a class="menu" href="index.html">Home </a></li>
+            <li>
+              <a class="menu" href="chat.html">Chat </a>
+              <span class="small notification notification-border">5</span>
+            </li>
+            <li>
+              <a class="menu" href="cart.html">Cart </a>
+              <span class="small notification notification-border">5</span>
+            </li>
             <li><a class="menu-btn" href="/profile.html">Profile</a></li>
           </div>
         </ul>
@@ -36,10 +42,11 @@
     </div>
 
     <div class="content">
-      <h1>Chat</h1>
-      <div>
-        <label for="Search">Search</label>
-        <input type="text" name="Search" id="Search" placeholder="Username" />
+      <div class="big chat-head"><b>Chat</b></div>
+      <div class="search-box">
+        <input type="text" name="" placeholder="Username" />
+        <span class="separator"></span>
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
       </div>
     </div>
 
@@ -124,8 +131,9 @@
             </div>
 
             <div class="respond_user">
-              <textarea placeholder="Write a message"></textarea>
-              <input type="submit" value="Send" />
+              <input type="text" name="" placeholder="Write a message" />
+              <span class="separator"></span>
+              <i class="fa-sharp fa-solid fa-paper-plane send-icon"></i>
             </div>
           </div>
         </div>
@@ -199,12 +207,11 @@
             />
             <div class="profile_name">Kanderjaya</div>
             <div class="border-seller">
-              <div class="position">Seller</div>
+              <div class="position">Super-Seller</div>
             </div>
           </div>
 
           <div class="active">
-            Status:
             <span class="online">Online</span>
           </div>
         </div>
@@ -261,16 +268,10 @@
             <span class="send">S</span>
           </div>
         </div>
-
         <div class="respond_user">
-          <textarea
-            name="respond"
-            id="respond"
-            cols="50"
-            rows="10"
-            placeholder="Write a message"
-          ></textarea>
-          <input type="submit" value="Send" />
+          <input type="text" name="" placeholder="Write a message" />
+          <span class="separator"></span>
+          <i class="fa-sharp fa-solid fa-paper-plane send-icon"></i>
         </div>
       </div>
     </div>
