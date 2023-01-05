@@ -7,6 +7,7 @@
     <title>BeliSkuy</title>
     <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/profile.css" />
@@ -85,11 +86,11 @@
               <i class="fa-solid fa-user"></i> Username
             </div>
             <div class="value">
-              <input type="text" name="username" id="" value="ivan0187" />
+              <input type="text" name="username" id="" value="ivan0187" disabled/>
             </div>
             <div class="change">
               <div class="button-change">
-                <a href="">Change</a>
+                <a href="#" id="username">Change</a>
               </div>
             </div>
           </div>
@@ -101,11 +102,11 @@
               <i class="fa-solid fa-cake-candles"></i> Date of Birth
             </div>
             <div class="value">
-              <input type="date" name="dob" id="" value="2002-08-17" />
+              <input type="date" name="dob" id="" value="2002-08-17" disabled />
             </div>
             <div class="change">
               <div class="button-change">
-                <a href="">Change</a>
+                <a href="#" id="dob">Change</a>
               </div>
             </div>
           </div>
@@ -117,7 +118,7 @@
               <i class="fa-solid fa-venus-mars"></i> Gender
             </div>
             <div class="value">
-              <select name="gender" id="">
+              <select name="gender" id="" disabled>
                 <option value="male" selected>Male</option>
                 <option value="female">Female</option>
               </select>
@@ -126,7 +127,7 @@
             <div class="change-gender change">
               <div class="">
                 <div class="button-change">
-                  <a href="">Change</a>
+                  <a href="#" id="gender">Change</a>
                 </div>
               </div>
             </div>
@@ -137,11 +138,11 @@
           <div>
             <div class="info-head"><i class="fa-solid fa-city"></i> City</div>
             <div class="value">
-              <input type="text" name="city" id="" value="Jakarta" />
+              <input type="text" name="city" id="" value="Jakarta" disabled />
             </div>
             <div class="change">
               <div class="button-change">
-                <a href="">Change</a>
+                <a href="#" id="city">Change</a>
               </div>
             </div>
           </div>
@@ -158,28 +159,11 @@
             <div class="value">
               <div class="value-email" id="value-email">
                 ivan0*****@*****.ac.id
-                <div class="option-email">
-                  <i class="fa-solid fa-eye" onclick="show()" id="show"></i>
-                  <i
-                    class="fa-solid fa-eye-slash"
-                    onclick="hide()"
-                    id="hide"
-                  ></i>
-                  <div class="verify">
-                    <div>Verified</div>
-                  </div>
-                  <div class="change">
-                    <div class="button-change">
-                      <a href="">Change</a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-            <div class="option-email-normal">
-              <i class="fa-solid fa-eye" onclick="show()" id="show"></i>
-              <i class="fa-solid fa-eye-slash" onclick="hide()" id="hide"></i>
-              <div class="verify">
+            <div class="option-email">
+              <i class="fa-solid fa-eye" id="toggle-email"></i>
+              <div class="verified">
                 <div>Verified</div>
               </div>
               <div class="change">
@@ -199,13 +183,21 @@
             <div class="value">
               <input
                 type="text"
-                name=""
+                name="phone"
                 id=""
                 placeholder="Insert Number Phone"
+                disabled
               />
             </div>
-            <div class="verify change">
-              <a href="" class="verify-number">Verify Number</a>
+            <div class="change">
+              <div class="button-change">
+                <a href="#">Verify Number</a>
+              </div>
+            </div>
+            <div class="change">
+              <div class="button-change">
+                <a href="#" id="phone">Change</a>
+              </div>
             </div>
           </div>
         </div>
@@ -223,5 +215,4 @@
       </div>
     </div>
   </body>
-  <script src="./js/profile.js"></script>
 </html>
