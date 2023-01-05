@@ -16,6 +16,7 @@ $(document).ready(() => {
     }
 
     //credential checker. Automatically redirects to login if not logged in
+    console.info(document.cookie);
     let cookieData = {};
     let cookies = document.cookie.split(';');
     cookies.forEach(e => {
@@ -23,13 +24,26 @@ $(document).ready(() => {
         let val = item[0] === 'isLoggedIn' ? Boolean(item[1]) : item[1];
         cookieData[item[0]] = val;
     })
-    console.info(!cookieData.hasOwnProperty('isLoggedIn') );
-    console.info(!cookieData.isLoggedIn );
     
-    if(!cookieData.hasOwnProperty('isLoggedIn') || !cookieData.isLoggedIn){
+    //if cookie present & the value is true, then the user is logged in
+    if(cookieData.hasOwnProperty('isLoggedIn') && cookieData.isLoggedIn){
         $('.require-login').attr('href', 'login.html');
         $("li > a[href='register.html']").parent().hide();
         $('.menu-btn').text('Profile').attr('href', 'profile.html');
+        $('ul.dropdown').addClass('loggedin');
+    }
+
+    //logout
+    if($('#logout').length){
+        $('#logout').click(e => {
+            e.preventDefault();
+            document.cookie.split(";").forEach(e => {
+                document.cookie = e.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+            });
+            window.localStorage.clear();
+            alert('Log out successful!');
+            location.assign('index.html');
+        })
     }
 
     //login validation
@@ -65,6 +79,8 @@ $(document).ready(() => {
             expirationDate.setTime(expirationDate.getTime() + duration);
             let cookieString = 'isLoggedIn=true;expires='+expirationDate.toUTCString()+';path=/';
             document.cookie = cookieString;
+            alert('Login Successful!');
+            location.assign('index.html');
         })
     }
 
