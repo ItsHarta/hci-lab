@@ -77,6 +77,7 @@ $(document).ready(() => {
                 return;
             }
 
+            //validation 5 : check if password and confirm password matches
             if(fields.password !== fields.confirm_password){
                 alert('Password confirmation does not match!');
                 return;
