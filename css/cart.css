@@ -256,11 +256,14 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid lightgray;
+  margin-top: 8px;
+  border-radius: 8px;
 }
 
 .respond-nego {
-  margin-top: 0.625rem;
-  width: 18rem;
+  margin-top: 14px;
+  width: 15rem;
 }
 
 .promo-code {
