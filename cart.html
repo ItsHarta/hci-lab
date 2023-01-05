@@ -7,6 +7,7 @@
     <title>BeliSkuy</title>
     <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -58,10 +59,10 @@
 
             <div class="content-cart">
               <div class="product">
-                <input type="checkbox" name="cart" id="cart" checked />
                 <div class="product-img">
+                  <input type="checkbox" name="cart" id="cart" checked />
                   <img
-                    src="/assets/cart/produkJeans-1.jpg"
+                    src="assets/cart/produkJeans-1.jpg"
                     alt=""
                     class="img-product"
                   />
@@ -80,21 +81,22 @@
                   </div>
 
                   <div class="mid-info">
-                    <div class="quantity-main">
+                    <div class="info-container">
                       Quantity:
                       <div class="product-qty">
-                        <button class="subtract">-</button>
+                        <button class="subtract" id="product-1">-</button>
                         <input
                           type="text"
                           value="1"
                           class="quantity"
+                          id="product-1"
                           disabled
                         />
-                        <button class="add">+</button>
+                        <button class="add" id="product-1">+</button>
                       </div>
                       <div class="info-qty">Min. Order : 1 pcs</div>
                     </div>
-                    <div class="nego">
+                    <div class="info-container">
                       Negotiate:
                       <div class="negotiate">
                         <input
@@ -105,8 +107,8 @@
                         />
                       </div>
                       <div class="nego-remain">Nego Remain: 3</div>
-                      <div class="negotiate-act">
-                        <a href="">Negotiate Product</a>
+                      <div class="negotiate-btn negotiate-act">
+                        <a href="">Negotiate</a>
                       </div>
                     </div>
                   </div>
@@ -126,7 +128,7 @@
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="#" class="link-act remove">Remove</a>
+                      <a href="#" class="link-act remove" id="product-1">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
@@ -137,10 +139,10 @@
               </div>
 
               <div class="product">
-                <input type="checkbox" name="cart" id="cart" checked />
                 <div class="product-img">
+                  <input type="checkbox" name="cart" id="cart" checked />
                   <img
-                    src="/assets/cart/produkJeans-2.jpg"
+                    src="assets/cart/produkJeans-2.jpg"
                     alt=""
                     class="img-product"
                   />
@@ -159,17 +161,18 @@
                   </div>
 
                   <div class="mid-info">
-                    <div class="quantity-main">
+                    <div class="info-container">
                       Quantity:
                       <div class="product-qty">
-                        <button class="subtract">-</button>
+                        <button class="subtract" id="product-2">-</button>
                         <input
                           type="text"
                           value="1"
                           class="quantity"
+                          id="product-2"
                           disabled
                         />
-                        <button class="add">+</button>
+                        <button class="add" id="product-2">+</button>
                       </div>
                       <div class="info-qty">Min. Order : 1 pcs</div>
                     </div>
@@ -198,7 +201,7 @@
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="#" class="link-act remove">Remove</a>
+                      <a href="#" class="link-act remove" id="product-2">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
@@ -253,10 +256,10 @@
             </div>
             <div class="content-cart">
               <div class="product">
-                <input type="checkbox" name="cart" id="cart" />
                 <div class="product-img">
+                  <input type="checkbox" name="cart" id="cart" />
                   <img
-                    src="/assets/cart/produkSepatu-1.jpg"
+                    src="assets/cart/produkSepatu-1.jpg"
                     alt=""
                     class="img-product"
                   />
@@ -276,21 +279,22 @@
                     </div>
                   </div>
                   <div class="mid-info">
-                    <div class="quantity-main">
+                    <div class="info-container">
                       Quantity:
                       <div class="product-qty">
-                        <button class="subtract">-</button>
+                        <button class="subtract" id="product-3">-</button>
                         <input
                           type="text"
                           value="1"
                           class="quantity"
+                          id="product-3"
                           disabled
                         />
-                        <button class="add">+</button>
+                        <button class="add" id="product-3">+</button>
                       </div>
                       <div class="info-qty">Min. Order : 1 pcs</div>
                     </div>
-                    <div class="nego">
+                    <div class="info-container">
                       Negotiate:
                       <div class="negotiate">
                         <input
@@ -301,8 +305,8 @@
                         />
                       </div>
                       <div class="nego-remain">Nego Remain : 2</div>
-                      <div class="negotiate-act">
-                        <a href="">Negotiate Product</a>
+                      <div class="negotiate-btn negotiate-act">
+                        <a href="">Negotiate</a>
                       </div>
                     </div>
                   </div>
@@ -333,7 +337,7 @@
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="#" class="link-act remove">Remove</a>
+                      <a href="#" class="link-act remove" id="product-3">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
@@ -344,11 +348,10 @@
               </div>
 
               <div class="product">
-                <input type="checkbox" name="cart" id="cart" />
                 <div class="product-img">
+                  <input type="checkbox" name="cart" id="cart" />
                   <img
-                    src="/assets/cart/produkSepatu-2.jpg"
-                    alt=""
+                    src="assets/cart/produkSepatu-2.jpg"
                     class="img-product"
                   />
                 </div>
@@ -368,23 +371,24 @@
                   </div>
 
                   <div class="mid-info">
-                    <div class="quantity-main">
+                    <div class="info-container">
                       Quantity:
                       <div class="product-qty">
-                        <button class="subtract">-</button>
+                        <button class="subtract" id="product-4">-</button>
                         <input
                           type="text"
                           value="1"
                           class="quantity"
+                          id="product-4"
                           disabled
                         />
-                        <button class="add">+</button>
+                        <button class="add" id="product-4">+</button>
                       </div>
                       <div class="info-qty">Min. Order : 1 pcs</div>
                     </div>
-                    <div class="nego">
+                    <div class="info-container">
                       Negotiate:
-                      <div class="negotiate-acc">Accepted</div>
+                      <div class="negotiate-acc negotiate-btn">Accepted</div>
                     </div>
                   </div>
 
@@ -412,7 +416,7 @@
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="#" class="link-act remove">Remove</a>
+                      <a href="#" class="link-act remove" id="product-4">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
@@ -436,10 +440,10 @@
             </div>
             <div class="content-cart">
               <div class="product">
-                <input type="checkbox" name="cart" id="cart" />
                 <div class="product-img">
+                  <input type="checkbox" name="cart" id="cart" />
                   <img
-                    src="/assets/cart/piyama.jpg"
+                    src="assets/cart/piyama.jpg"
                     alt=""
                     class="img-product"
                   />
@@ -458,17 +462,18 @@
                   </div>
 
                   <div class="mid-info">
-                    <div class="quantity-main">
+                    <div class="info-container">
                       Quantity:
                       <div class="product-qty">
-                        <button class="subtract">-</button>
+                        <button class="subtract" id="product-5">-</button>
                         <input
                           type="text"
                           value="1"
                           class="quantity"
+                          id="product-5"
                           disabled
                         />
-                        <button class="add">+</button>
+                        <button class="add" id="product-5">+</button>
                       </div>
                       <div class="info-qty">Min. Order : 1 pcs</div>
                     </div>
@@ -491,7 +496,7 @@
                     </div>
                     <div class="delete act">
                       <i class="fa-solid fa-trash-can"></i>
-                      <a href="#" class="link-act remove">Remove</a>
+                      <a href="#" class="link-act remove" id="product-5">Remove</a>
                     </div>
                     <div class="help act">
                       <i class="fa-regular fa-comment"></i>
@@ -517,4 +522,3 @@
       </div>
     </div>
 </html>
-<script src="/js/cart.js"></script>

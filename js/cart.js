@@ -1,35 +1,19 @@
-//Variable for save value of quantity
-var quantity = 0;
+$(document).ready(() => {
+  $('.subtract').click(e => {
+    let id = e.target.id;
+    let val = parseInt($('input#'+id).val());
+    if(val > 1)
+      $('input#'+id).val(parseInt(val)-1);
+  });
 
-//Decrement for value quantity
-$(".subtract").click(function () {
-  var $this = $(this),
-    $insert = $this.next("input"),
-    $parentInsert = $insert.closest("div");
-  if (parseInt($insert.val()) > 1) {
-    var newQuantity = parseInt($insert.val()) - 1;
-    $parentInsert.find(".add").addClass("a" + newQuantity);
-    $insert.val(newQuantity);
-    quantity = quantity + newQuantity;
-  }
+  $('.add').click(e => {
+    let id = e.target.id;
+    let val = parseInt($('input#'+id).val());
+    $('input#'+id).val(parseInt(val)+1);
+  });
+
+  $('div.delete.act').click(e => {
+    e.preventDefault();
+    $(this).closest(".product").remove();
+  });
 });
-
-//Increment for value quantity
-$(".add").click(function () {
-  var $this = $(this),
-    $insert = $this.prev("input"),
-    $parentInsert = $insert.closest("div");
-  if (parseInt($insert.val()) < 100) {
-    var newQuantity = parseInt($insert.val()) + 1;
-    $parentInsert.find(".add").addClass("a" + newQuantity);
-    $insert.val(newQuantity);
-    quantity = quantity + newQuantity;
-  }
-});
-
-//Function to Delete Item
-$(".remove").click(function () {
-  $delete = $(this).closest(".product");
-  $delete.remove();
-});
-
