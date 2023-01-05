@@ -31,14 +31,25 @@
   width: 7rem;
   height: 7rem;
   padding: 0.313rem;
-  border-radius: 25%;
+  margin-left: 8px;
 }
 
 .product {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 20px 0;
+  padding: 28px 44px;
+  min-height: 200px;
+}
+
+.product-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .left-info {
@@ -46,14 +57,15 @@
 }
 
 #cart {
-  margin: 0.625rem;
+  width: fit-content;
   display: flex;
   align-content: center;
 }
 
 .product:hover {
-  background-color: #71bdffe3;
-  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18), 0 2px 4px rgba(0,0,0,0.36);
+  transition: 0.25s all cubic-bezier(0.25,0.8,0.25,1);
 }
 
 .price-info:hover {
@@ -64,15 +76,11 @@
 .product-info {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .product-info > div {
-  margin: 1.25rem;
-}
-
-.product > div {
-  margin: 1.25rem;
+  margin: 0 18px;
 }
 
 .product-name {
@@ -90,12 +98,6 @@
   text-decoration: none;
 }
 
-.quantity-main {
-  text-align: center;
-  border: 1px solid #ebebeb;
-  width: 100%;
-}
-
 .current-price {
   text-align: center;
   border: 1px solid #ebebeb;
@@ -109,18 +111,16 @@
   text-align: center;
 }
 
-.product-qty > span {
-  background-color: #0275d8;
-  border-radius: 20px;
-  padding: 0rem 0.625rem;
-  color: white;
-}
-
-.nego {
+.info-container {
   text-align: center;
   border: 1px solid #ebebeb;
-  width: 100%;
-  margin: 0.625rem 0;
+  min-width: 164px;
+  margin: 8px 0;
+  padding: 4px 14px;
+}
+
+.info-container > div {
+  padding: 4px 0;
 }
 
 #negotiate {
@@ -151,6 +151,13 @@
   color: #0275d8;
 }
 
+.negotiate-btn {
+  border-radius: 20px;
+  padding: 8px 14px;
+  margin: 6px 0;
+  background-color: #0275d8;
+}
+
 .negotiate-acc {
   background-color: #7caa2d;
   border-radius: 20px;
@@ -170,9 +177,17 @@
   color: white;
 }
 
+.negotiate-act {
+  border: 1px solid #0275d8;
+}
 .negotiate-act:hover {
-  background-color: #0275d8;
-  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #0275d8;
+  
+}
+.negotiate-act:hover > a {
+  color: #0275d8;
+  
 }
 
 .negotiate-act > a {
@@ -251,22 +266,18 @@
   margin-top: 0.625rem;
 }
 
-.action {
-  color: white;
-}
-
 .act {
   margin-top: 0.625rem;
 }
 
 .link-act {
   text-decoration: none;
-  color: white;
+  color: black;
   margin-left: 1.25rem;
 }
 
-.link-act:hover {
-  color: red;
+.action > div:hover > i, .action > div:hover > a{
+  color: #0275d8;
 }
 
 .act > div {
@@ -297,7 +308,7 @@
 
 .confirm-seller > a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .confirm-seller > a:hover {
