@@ -16,7 +16,6 @@ $(document).ready(() => {
     }
 
     //credential checker. Automatically redirects to login if not logged in
-    console.info(document.cookie);
     let cookieData = {};
     let cookies = document.cookie.split(';');
     cookies.forEach(e => {
@@ -26,8 +25,11 @@ $(document).ready(() => {
     })
     
     //if cookie present & the value is true, then the user is logged in
-    if(cookieData.hasOwnProperty('isLoggedIn') && cookieData.isLoggedIn){
-        $('.require-login').attr('href', 'login.html');
+    if(!cookieData.hasOwnProperty('isLoggedIn') || !cookieData.isLoggedIn){
+        $('.require-login').attr('href', 'login.html').click(e => {
+            alert('You must be logged in to use this menu!');
+        });
+    }else{
         $("li > a[href='register.html']").parent().hide();
         $('.menu-btn').text('Profile').attr('href', 'profile.html');
         $('ul.dropdown').addClass('loggedin');
