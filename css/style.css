@@ -89,17 +89,17 @@ li > a {
   display: none;
 }
 
-li:hover .dropdown {
+li:hover .dropdown.loggedin {
   display: block;
 }
 
 .dropdown {
   background-color: white;
-  margin-left: -20px;
+  margin-left: -6px;
   padding-left: 0;
   position: absolute;
   display: none;
-  top: 70px;
+  top: 62px;
   box-shadow: 1px 1px 3px gray;
   border-radius: 6px;
   z-index: 5;
@@ -231,8 +231,8 @@ li:hover .dropdown {
     cursor: pointer;
   }
   .dropdown {
-    left: 65%;
-    top: 44px;
+    left: 55%;
+    top: 80%;
   }
   .dropdown li a {
     color: #0275d8;
