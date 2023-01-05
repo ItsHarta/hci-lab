@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/register.css">
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>BeliSkuy</title>
 </head>
@@ -21,54 +23,59 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
                 <div class="nav-items">
                     <li><a class="menu" href="index.html">Home</a></li>
-                    <li><a class="menu" href="chat.html">Chat</a></li>
-                    <li><a class="menu" href="cart.html">Cart</a></li>
+                    <li><a class="menu require-login" href="chat.html">Chat</a></li>
+                    <li><a class="menu require-login" href="cart.html">Cart</a></li>
                     <li><a class="menu" href="register.html">Register</a></li>
-                    <li><a class="menu-btn" href="login.html">Login</a></li>
+                    <li>
+                        <a class="menu-btn" href="login.html">Login</a>
+                        <ul class="dropdown">
+                            <li><a href="#" class="menu" id="logout">Logout</a></li>
+                        </ul>
+                    </li>
                 </div>
             </ul>
         </nav>
     </div>
     <div class="content"> 
         <div class="content-header">Register</div>
-        <div class="container">
+        <div class="register-container">
             <form class="form">
                 <div class="form__div">
-                    <input type="text" name="name" required>
+                    <input type="text" name="user">
                     <label for="" class="form__label">Username</label>
                 </div>
                 <div class="form__div">
-                    <input type="text" name="user" required>
+                    <input type="text" name="email">
                     <label for="" class="form__label">Email</label>
                 </div>
                 <div class="form__div">
-                    <input type="date" name="bod" required>
+                    <input type="date" name="dob">
                     <label for="" class="form__label-date">Date of Birth</label>
                 </div>
                 <div class="form__radio">
                     <label class="form__label">Gender</label>
                     <div>
-                        <input type="radio" id="male" name="gender">
+                        <input type="radio" id="male" name="gender" value="male">
                         <label for="male">Male</label>
                     </div>
                     <div>
-                        <input type="radio" id="female" name="gender">
+                        <input type="radio" id="female" name="gender" value="female">
                         <label for="female">Female</label>
                     </div>
                 </div>
                 <div class="form__select">
                     <label style="width: 100%">City</label>
-                    <select name="city" id="">
-                        <option value="1">Jakarta</option>
-                        <option value="2">Medan</option>
+                    <select name="city" id="city">
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Medan">Medan</option>
                     </select>
                 </div>
                 <div class="form__div">
-                    <input type="password" name="password" required>
+                    <input type="password" name="password">
                     <label for="" class="form__label">Password</label>
                 </div>
                 <div class="form__div">
-                    <input type="password" name="password_confirm" required>
+                    <input type="password" name="confirm_password">
                     <label for="" class="form__label">Confirm Password</label>
                 </div>
                 <div class="form__checkbox">
@@ -76,7 +83,7 @@
                     <span>By registering you agree to the BeliSkuy Terms and Conditions</span>
                 </div>
                 <div class="form__div">
-                    <button class="submit" type="submit">Register</button>
+                    <button class="submit" type="submit" id="register-btn">Register</button>
                 </div>
             </form>
         </div>

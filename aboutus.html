@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aboutus.css">
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>BeliSkuy</title>
 </head>
@@ -21,10 +23,15 @@
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
                 <div class="nav-items">
                     <li><a class="menu" href="index.html">Home</a></li>
-                    <li><a class="menu" href="chat.html">Chat</a></li>
-                    <li><a class="menu" href="cart.html">Cart</a></li>
+                    <li><a class="menu require-login" href="chat.html">Chat</a></li>
+                    <li><a class="menu require-login" href="cart.html">Cart</a></li>
                     <li><a class="menu" href="register.html">Register</a></li>
-                    <li><a class="menu-btn" href="login.html">Login</a></li>
+                    <li>
+                        <a class="menu-btn" href="login.html">Login</a>
+                        <ul class="dropdown">
+                            <li><a href="#" class="menu" id="logout">Logout</a></li>
+                        </ul>
+                    </li>
                 </div>
             </ul>
         </nav>
