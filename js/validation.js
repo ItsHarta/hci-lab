@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    //email checker function
     function checkEmail(item) {
         let symbol = item.indexOf("@");
         if(symbol < 1) 
@@ -14,6 +15,60 @@ $(document).ready(() => {
         return true;
     }
 
+    //credential checker. Automatically redirects to login if not logged in
+    let cookieData = {};
+    let cookies = document.cookie.split(';');
+    cookies.forEach(e => {
+        let item = e.split('=');
+        let val = item[0] === 'isLoggedIn' ? Boolean(item[1]) : item[1];
+        cookieData[item[0]] = val;
+    })
+    console.info(!cookieData.hasOwnProperty('isLoggedIn') );
+    console.info(!cookieData.isLoggedIn );
+    
+    if(!cookieData.hasOwnProperty('isLoggedIn') || !cookieData.isLoggedIn){
+        $('.require-login').attr('href', 'login.html');
+        $("li > a[href='register.html']").parent().hide();
+        $('.menu-btn').text('Profile').attr('href', 'profile.html');
+    }
+
+    //login validation
+    if($('#login-btn').length){
+        $('#login-btn').click(e => {
+            e.preventDefault();
+            let fields = {
+                user: '',
+                password: ''
+            };
+
+            let keys = Object.keys(fields);
+            keys.every(e => {
+                fields[e] = $('input[name='+e+']').val();
+                if(!fields[e].trim()){
+                    alert('The '+e.split('_').join(' ')+' field is required!');
+                    isValid = false;
+                    return false;
+                }
+                return true;
+            });
+
+            if(!checkEmail(fields.user)){
+                alert('Email is not valid!');
+                return;
+            }
+
+            //set login cookie
+            // 5 minutes in miliseconds
+            const duration = 300*1000;
+            //set expiration date to 5 minutes;
+            let expirationDate = new Date();
+            expirationDate.setTime(expirationDate.getTime() + duration);
+            let cookieString = 'isLoggedIn=true;expires='+expirationDate.toUTCString()+';path=/';
+            document.cookie = cookieString;
+        })
+    }
+
+    //register validation
     if($('#register-btn').length){
         $('#register-btn').click(e => {
             e.preventDefault();
