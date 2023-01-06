@@ -310,6 +310,15 @@
   #cart {
     float: left;
   }
+
+  .product-img{
+    max-width: 50%;
+    margin-bottom: 18px;
+  }
+
+  .product-info {
+   width: 80%;
+  }
   .product {
     flex-direction: column;
   }
