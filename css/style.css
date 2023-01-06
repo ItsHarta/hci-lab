@@ -195,6 +195,12 @@ li:hover .dropdown.loggedin {
   font-size: 16px;
 }
 
+@media screen and (max-width: 1560px) {
+  .content {
+    margin: 1.5% 12% 10% 12%;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .nav-items {
     display: none;
