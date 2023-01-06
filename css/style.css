@@ -202,6 +202,7 @@ li:hover .dropdown.loggedin {
 }
 
 @media screen and (max-width: 1000px) {
+
   .nav-items {
     display: none;
     position: absolute;

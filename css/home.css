@@ -107,11 +107,18 @@ h4 {
 .btn-blue {
     color: #fff;
     background-color: #0275d8;
+    border: 1px solid #0275d8;
     font-size: 1.48rem;
     width: fit-content;
     padding: 14px 18px;
     border-radius: 14px;
     text-decoration: none;
+}
+
+.btn-blue:hover {
+    border: 1px solid #0275d8;
+    background-color: white;
+    color: #0275d8;
 }
 
 .slide-item {
@@ -126,6 +133,7 @@ h4 {
     width: fit-content;
     display: flex;
     flex-direction: column;
+    text-overflow: ellipsis;
 
 }
 
@@ -206,7 +214,13 @@ h4 {
     }
 
     .slide-item {
-        grid-template-columns: repeat(1, 1fr);
-        row-gap: 15px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slide-col img {
+        margin: auto 0;
+        padding: 0 18px;
+        height: 150px;
     }
 }
