@@ -237,14 +237,6 @@
   width: 15rem;
 }
 
-.promo-code {
-  margin-bottom: 0.625rem;
-}
-
-.promo-code > div > input {
-  margin-top: 0.625rem;
-}
-
 .act {
   margin-top: 12px;
   border: 1px solid lightgray;
@@ -270,12 +262,6 @@
 
 .action > div:hover > i, .action > div:hover > a{
   color: #0275d8;
-}
-
-.head-price {
-  font-weight: bold;
-  text-align: center;
-  margin: 0.625rem;
 }
 
 .price-info {
@@ -309,6 +295,15 @@
 @media screen and (max-width: 1560px) {
   #cart {
     float: left;
+  }
+
+  .product-img{
+    max-width: 50%;
+    margin-bottom: 18px;
+  }
+
+  .product-info {
+   width: 80%;
   }
   .product {
     flex-direction: column;
