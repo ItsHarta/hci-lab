@@ -277,21 +277,35 @@ textarea {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-  }
-  .info_seller {
+}
+
+.chat_active{
+    margin-left: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-  }
-  .name {
-    margin: 2rem;
-  }
-  .status {
-    margin: auto;
-    text-align: right;
-  }
-  .last_chat {
-    display: none;
-  }
+    width: 800px;
+}
+
+.position{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.border-seller{
+    background-color: #0275d8;
+    border-radius: 25%;
+    width: 50px;
+}
+
+.history_chat{
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reply_user{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
