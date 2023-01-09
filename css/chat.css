@@ -1,31 +1,32 @@
-.global-chat {
-  /* border: #0275d8 solid 1px; */
-  height: 100%;
-  width: 437.5rem;
-  width: 187.5rem;
-}
-
-.content {
+.content-header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.chat-head {
-  margin: 10px 10px;
-  padding: 10px 14px;
+  align-items: center;
+  margin-bottom: 44px;
 }
 
 .search-box {
-  border: 1px solid lightgray;
-  height: 30px;
-  background-color: white;
-  border-radius: 30px;
+  width: 55%;
+  margin-right: 0;
+}
+
+.content-body {
   display: flex;
-  align-items: center;
-  padding: 10px 14px;
-  margin: 10px 10px;
+  flex-direction: row;
+}
+
+.list_chat {
+  padding: 14px 22px;
+}
+
+.list_chat:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18), 0 2px 4px rgba(0,0,0,0.36);
+  transition: 0.25s all cubic-bezier(0.25,0.8,0.25,1);
+}
+
+.respond_user > i {
+  font-size: 20px;
+  color: #777;
 }
 
 .respond_user {
@@ -40,25 +41,6 @@
   margin: 10px 10px;
 }
 
-.search-box > i {
-  font-size: 20px;
-  color: #777;
-}
-
-.respond_user > i {
-  font-size: 20px;
-  color: #777;
-}
-
-.search-box > input {
-  flex: 1;
-  height: 20px;
-  border: none;
-  outline: none;
-  padding-left: 12px;
-  font-size: 1.1rem;
-}
-
 .respond_user > input {
   flex: 1;
   height: 20px;
@@ -68,24 +50,11 @@
   font-size: 1.1rem;
 }
 
-.search-box > .separator {
-  border-left: 1px solid lightgray;
-  max-width: 1px;
-  height: 30px;
-  margin: 0 1rem;
-}
-
 .respond_user > .separator {
   border-left: 1px solid lightgray;
   max-width: 1px;
   height: 30px;
   margin: 0 1rem;
-}
-
-.search-box > .search-icon {
-  cursor: pointer;
-  margin: 0 0.5rem;
-  color: #bababa;
 }
 
 .respond_user > .send-icon {
@@ -112,21 +81,6 @@
 .last_chat {
   text-align: right;
   margin-right: 1.25rem;
-}
-
-.info-chat {
-  /* border: #0275d8 solid 1px; */
-  margin-left: 1.25rem;
-}
-
-.info-chat:hover {
-  background-color: #71bdffe3;
-  border-radius: 1.25rem;
-}
-
-.selected-user {
-  background-color: #71bdffe3;
-  border-radius: 1.25rem;
 }
 
 .user {
@@ -232,9 +186,14 @@ textarea {
   width: 440px;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    width: fit-content;
+@media screen and (max-width: 1000px) {
+  .content-header{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .chat-head, .search-box {
+    margin: 6px 0;
+    width: 100%;
   }
   .global-chat {
     width: auto;
@@ -252,9 +211,6 @@ textarea {
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    width: fit-content;
-  }
   .global-chat {
     width: auto;
     height: auto;
