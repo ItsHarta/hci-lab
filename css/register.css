@@ -204,19 +204,24 @@ p {
     color: darkgray;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1000px){
+    .form {
+        min-width: auto;
+        max-width: 95vw;
+    }
+
     .form__div {
         min-width: auto;
-        max-width: 400px;
+        max-width: 95vw;
     }
     
     .form__radio {
         min-width: auto;
-        max-width: 400px;
+        max-width: 95vw;
     }
     
     .form__select {
         min-width: auto;
-        max-width: 400px;
+        max-width: 95vw;
     }
 }

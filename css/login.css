@@ -90,3 +90,26 @@ p {
 .register-link:hover {
     color: darkgray;
 }
+
+@media screen and (max-width: 1000px){
+    .form {
+        min-width: auto;
+        max-width: 96vw;
+        margin: 0;
+    }
+
+    .form__div {
+        min-width: auto;
+        max-width: 96vw;
+    }
+    
+    .form__radio {
+        min-width: auto;
+        max-width: 96vw;
+    }
+    
+    .form__select {
+        min-width: auto;
+        max-width: 96vw;
+    }
+}
