@@ -1,31 +1,37 @@
-$(document).ready(() => {
-    //email checker function
-    function checkEmail(item) {
-        let symbol = item.indexOf("@");
-        if(symbol < 1) 
-            return false;
-
-        let dot = item.indexOf(".");
-        if(dot <= symbol + 2) 
-            return false;
-    
-        if (dot === item.length - 1) 
-            return false;
-    
-        return true;
-    }
-
-    //credential checker. Automatically redirects to login if not logged in
+//credential checker. Automatically redirects to login if not logged in
+const checkCookie = () => {
     let cookieData = {};
     let cookies = document.cookie.split(';');
     cookies.forEach(e => {
         let item = e.split('=');
         let val = item[0] === 'isLoggedIn' ? Boolean(item[1]) : item[1];
         cookieData[item[0]] = val;
-    })
-    
-    //if cookie present & the value is true, then the user is logged in
+    });
     if(!cookieData.hasOwnProperty('isLoggedIn') || !cookieData.isLoggedIn){
+        return true;
+    }else{
+        return false;
+    }
+};
+
+//email checker function
+const checkEmail = (item) => {
+    let symbol = item.indexOf("@");
+    if(symbol < 1) 
+        return false;
+
+    let dot = item.indexOf(".");
+    if(dot <= symbol + 2) 
+        return false;
+
+    if (dot === item.length - 1) 
+        return false;
+
+    return true;
+};
+$(document).ready(() => {
+    //if cookie present & the value is true, then the user is logged in
+    if(checkCookie()){
         $('.require-login').attr('href', 'login.html').click(e => {
             alert('You must be logged in to use this menu!');
         });
@@ -74,8 +80,8 @@ $(document).ready(() => {
             }
 
             //set login cookie
-            // 5 minutes in miliseconds
-            const duration = 300*1000;
+            //30 minutes in miliseconds
+            const duration = 1800*1000;
             //set expiration date to 5 minutes;
             let expirationDate = new Date();
             expirationDate.setTime(expirationDate.getTime() + duration);
