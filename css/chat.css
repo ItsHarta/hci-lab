@@ -18,11 +18,20 @@
   width: 50%;
 }
 
-.list_chat {
+.chat-active {
+  width: 45%;
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-chat {
   padding: 14px 22px;
 }
 
-.list_chat:hover {
+.list-chat:hover {
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,0.18), 0 2px 4px rgba(0,0,0,0.36);
   transition: 0.25s all cubic-bezier(0.25,0.8,0.25,1);
@@ -57,46 +66,28 @@
   margin-right: 25px;
 }
 
-.active {
-  width: 6.25rem;
-  text-align: center;
-}
-
-.online {
-  font-weight: bold;
+.category {
+  border: 1px solid #0275d8;
+  padding: 4px 10px;
+  border-radius: 10px;
   color: #0275d8;
 }
 
-.profile_name {
-  text-align: left;
-  font-weight: bolder;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+.active {
+  padding-top: 8px;
 }
 
-.chat_customer {
+.chat-customer {
   text-align: right;
 }
 
-.read {
-  color: #0275d8;
-  font-weight: bold;
-}
-
-.message_system {
+.time {
+  color: darkgray;
   font-style: italic;
 }
 
-.chat_customer {
-  margin: 1.25rem;
-}
-
-.chat-active {
-  margin-left: 44px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.message-system {
+  font-style: italic;
 }
 
 .chat-active-header {
@@ -122,44 +113,19 @@
   justify-content: flex-start;
 }
 
-.main-chat {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.position {
-  color: white;
-  font-weight: bold;
-  text-align: center;
-}
-
-.border-seller {
-  background-color: #0275d8;
-  border-radius: 50px;
-  width: 6.5rem;
-}
-
 .history-chat {
   margin: 28px 0;
   width: 90%;
   align-self: center;
 }
 
-.reply_user {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+.history-chat > div {
+  margin: 18px 0;
 }
 
 .chat-box {
   width: 90%;
   align-self: center;
-}
-
-textarea {
-  height: 45px;
-  width: 440px;
 }
 
 @media screen and (max-width: 1000px) {
