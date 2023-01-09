@@ -113,6 +113,15 @@
   justify-content: flex-start;
 }
 
+.profile-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  width: fit-content;
+}
+
 .history-chat {
   margin: 28px 0;
   width: 90%;
@@ -140,14 +149,5 @@
   .global-chat {
     width: auto;
     height: auto;
-  }
-  .chat {
-    display: none;
-  }
-  .last-seen {
-    display: none;
-  }
-  .chat-active {
-    width: 32rem;
   }
 }
