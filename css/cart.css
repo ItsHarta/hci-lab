@@ -207,30 +207,6 @@
   color: white;
 }
 
-.confirm {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0.625rem 0;
-}
-
-.confirm-bestPrice {
-  background-color: #7caa2d;
-  border-radius: 20px;
-  width: 5rem;
-  text-align: center;
-  color: white;
-}
-
-.confirm-original {
-  background-color: #0275d8;
-  border-radius: 20px;
-  width: 40%;
-  text-align: center;
-  color: white;
-}
-
 .pre-order {
   font-style: italic;
   font-weight: bold;
@@ -240,11 +216,6 @@
 .product-price > span {
   font-weight: bold;
   color: #0275d8;
-}
-
-.courier-main {
-  display: flex;
-  flex-direction: column;
 }
 
 .nego-info {
@@ -264,14 +235,6 @@
 .respond-nego {
   margin-top: 14px;
   width: 15rem;
-}
-
-.promo-code {
-  margin-bottom: 0.625rem;
-}
-
-.promo-code > div > input {
-  margin-top: 0.625rem;
 }
 
 .act {
@@ -299,12 +262,6 @@
 
 .action > div:hover > i, .action > div:hover > a{
   color: #0275d8;
-}
-
-.head-price {
-  font-weight: bold;
-  text-align: center;
-  margin: 0.625rem;
 }
 
 .price-info {
@@ -335,7 +292,26 @@
   color: #0275d8;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1560px) {
+  #cart {
+    float: left;
+  }
+
+  .product-img{
+    max-width: 50%;
+    margin-bottom: 18px;
+  }
+
+  .product-info {
+   width: 80%;
+  }
+  .product {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
   .nego-info {
     display: none;
   }
@@ -348,95 +324,8 @@
   .product-info > div {
     margin: 0.5rem;
   }
-}
 
-@media screen and (max-width: 480px) {
-  body {
-    width: fit-content;
-  }
-
-  .product {
-    width: fit-content;
-  }
-
-  .left-info {
-    width: fit-content;
-  }
-
-  .img-product {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 25%;
-  }
-
-  .product-name {
-    font-weight: bold;
-    font-size: 15px;
-    width: fit-content;
-  }
-
-  .price-info {
-    display: flex;
+  .product, .product-info {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
-  }
-
-  .price-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
-  }
-
-  .product:hover {
-    background-color: #71bdffe3;
-    width: fit-content;
-    border-radius: 20px;
-  }
-
-  .price-info:hover {
-    background-color: #71bdffe3;
-    width: max-content;
-    border-radius: 20px;
-  }
-
-  .confirm-seller {
-    margin: 10px 0 20px auto;
-  }
-
-  .head-price {
-    font-weight: bold;
-    text-align: center;
-    width: 25rem;
-    margin: 10px;
-  }
-
-  .price-org {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 25rem;
-  }
-
-  .nego-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .confirm-original {
-    margin-left: 20px;
-  }
-
-  .confirm-nego {
-    margin-left: 20px;
-  }
-
-  .promo-code {
-    margin: 0;
   }
 }

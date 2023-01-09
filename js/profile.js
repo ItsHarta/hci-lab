@@ -1,15 +1,29 @@
-$(".user-img").click(function () {
-  $("#image").click();
+$(document).ready(() => {
+  $(".user-img").click(e => {
+    $("#image").click();
+  });
+  
+  $('.button-change').click(e => {
+    e.preventDefault();
+    let id = e.target.id;
+    switch(id) {
+      case 'gender':
+        $('select[name='+id+']').prop('disabled', (i, v) => !v );
+        $('#'+id).text() === 'Change' ? $('#'+id).text('Save') : $('#'+id).text('Change');
+        break;
+      default:
+        $('input[name='+id+']').prop('disabled', (i, v) => !v);
+        $('#'+id).text() === 'Change' ? $('#'+id).text('Save') : $('#'+id).text('Change');
+    }
+  });
+
+  $('#toggle-email').click(e => {
+    let normalText = "ivan013@binus.ac.id";
+    let hiddenText = "ivan0*****@*****.ac.id";
+    let field = $('#value-email');
+    if(field.text().trim() === hiddenText)
+      field.text(normalText);
+    else
+      field.text(hiddenText);
+  });
 });
-
-function show() {
-  document.getElementById("value-email").textContent = "ivan013@binus.ac.id";
-  document.getElementById("show").style.display = "none";
-  document.getElementById("hide").style.display = "block";
-}
-
-function hide() {
-  document.getElementById("value-email").textContent = "ivan0*****@*****.ac.id";
-  document.getElementById("show").style.display = "block";
-  document.getElementById("hide").style.display = "none";
-}
