@@ -5,7 +5,7 @@
 }
 
 .search-username {
-  width: 55%;
+  width: 40%;
   margin-right: 0;
 }
 
@@ -15,11 +15,11 @@
 }
 
 .global-chat {
-  width: 50%;
+  width: 35%;
 }
 
 .chat-active {
-  width: 45%;
+  width: 60%;
   margin-left: 4%;
   display: flex;
   flex-direction: column;
@@ -138,16 +138,74 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .content {
+    margin: 1.5% 0 10% 0;
+  }
+  
   .content-header{
     flex-direction: column;
     justify-content: space-between;
   }
-  .chat-head, .search-username {
-    margin: 6px 0;
-    width: 100%;
+  
+  .content-body {
+    flex-direction: column;
   }
-  .global-chat {
+
+  .chat-head, .search-username {
+    align-self: flex-start;
+    width: 90%;
+    margin: 8px 4%;
+  }
+
+  .chat-active {
     width: auto;
-    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .global-chat {
+    width: max-content;
+    margin-left: 0;
+  }
+
+  .global-chat {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    overflow-x: scroll;
+    white-space: nowrap; 
+    margin-top: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid lightgray;
+    border-radius: 8px;
+  }
+
+  .global-chat > .list-chat {
+    margin: 0;
+  }
+
+  .list-chat.container {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .list-chat:hover {
+    cursor: default;
+  }
+
+  .info-seller, .last-chat-content {
+    display: none;
+  }
+  
+  .last-chatted > .user-img {
+    margin: 0 auto;
+    padding: 2px;
+  }
+
+  .last-chatted > .user-img:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18), 0 2px 4px rgba(0,0,0,0.36);
+    transition: 0.25s all cubic-bezier(0.25,0.8,0.25,1);
   }
 }

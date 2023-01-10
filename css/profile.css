@@ -71,7 +71,7 @@ input, select{
 }
 
 .value {
-  width: 12rem;
+  width: 14rem;
 }
 
 .value > input {
@@ -154,72 +154,47 @@ input, select{
   border-radius: 18px;
 }
 
-@media (max-width: 768px) {
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .info > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 1.25rem;
-  }
-  .option-email-normal {
-    display: none;
-  }
-  .option-email {
-    display: flex;
-  }
-  #show {
-    padding-left: 0rem;
-  }
-  #hide {
-    padding-left: 0rem;
-  }
-  .value {
-    display: block;
-  }
-  .info-head {
-    font-weight: bold;
-  }
+.email.info > div > .value {
+  display: flex;
+  flex-direction: row;
 }
 
-@media (max-width: 480px) {
-  .main-content {
-    display: flex;
+.value-email {
+  margin: 0 14px;
+}
+
+.number-action {
+  display: flex;
+  flex-direction: row;
+}
+
+.number-action > div {
+  margin: 0 18px 0 0;
+}
+@media (max-width: 1000px) {
+  .info > div {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    width: 90%;
   }
 
-  .info > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 1.25rem;
+  .info-head, .value, .change {
+    margin: 10px 0;
   }
-  .option-email-normal {
-    display: none;
+
+  .value, .value > input{
+    width: 100%;
   }
-  .option-email {
-    display: flex;
+
+  .verified {
+    margin-right: 14px;
   }
-  #show {
-    padding-left: 0rem;
+
+  .contact {
+    height: auto;
   }
-  #hide {
-    padding-left: 0rem;
-  }
-  .value {
-    display: block;
-  }
-  .info-head {
-    font-weight: bold;
+
+  .number-action {
+    margin: 10px 18px 10px 0;
   }
 }

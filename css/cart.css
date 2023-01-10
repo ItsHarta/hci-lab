@@ -298,13 +298,15 @@
   }
 
   .product-img{
-    max-width: 50%;
-    margin-bottom: 18px;
+    width: 50%;
+    margin: 0 0 18px 18px;
+    align-self: flex-start;
   }
 
   .product-info {
-   width: 80%;
+   width: 100%;
   }
+
   .product {
     flex-direction: column;
   }
@@ -318,14 +320,25 @@
   .price-list {
     width: 35rem;
   }
+
   .product > div {
     margin: 0;
   }
+
+  #cart {
+    display: none;
+  }
+
+  .product-info, .product-img {
+    width: 95%;
+    align-self: center;
+  }
+
   .product-info > div {
     margin: 0.5rem;
   }
 
-  .product, .product-info {
+  .product, .product-info, .product-img {
     flex-direction: column;
   }
 }
