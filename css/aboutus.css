@@ -1,11 +1,11 @@
 .content {
-    margin: 3em 0;
     padding: 0 10em;
     text-align: center;
 }
 
-.content img {
+.content > img {
     padding-top: 2.5em;
+    width: 10vw;
 }
 
 .content-header {
