@@ -11,9 +11,4 @@ $(document).ready(() => {
     let val = parseInt($('input#'+id).val());
     $('input#'+id).val(parseInt(val)+1);
   });
-
-  $('div.delete.act').click(e => {
-    e.preventDefault();
-    $(this).closest(".product").remove();
-  });
 });
