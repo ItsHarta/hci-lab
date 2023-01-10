@@ -26,4 +26,15 @@ $(document).ready(() => {
     else
       field.text(hiddenText);
   });
+  
+  $('#image').change(() => {
+    let file = $('#image')[0];
+    if(file.files && file.files[0]){
+      reader = new FileReader();
+			reader.onload = function () {
+				$('img.user-img').attr('src', reader.result);
+			};
+			reader.readAsDataURL(file.files[0]);
+    }
+  });
 });
