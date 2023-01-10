@@ -184,10 +184,16 @@ li:hover .dropdown.loggedin {
   text-align: center;
 }
 
-.social-links > i {
+.social-links > a {
   font-size: 24px;
   padding: 12px;
   margin-top: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.social-links > a:hover {
+  color: #0275d8;
 }
 
 .copyright {
