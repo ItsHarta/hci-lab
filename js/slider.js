@@ -1,4 +1,4 @@
-$(function() {
+$(() => {
   
     var slideCount =  $(".slider ul li").length;
     var slideWidth =  $(".slider ul li").width();
@@ -9,7 +9,7 @@ $(function() {
     $(".slider ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
     $(".slider ul li:last-child").prependTo($(".slider ul"));
     
-    function moveLeft() {
+    const moveLeft = () => {
       $(".slider ul").stop().animate({
         left: + slideWidth
       },700, function() {
@@ -18,7 +18,7 @@ $(function() {
       });
     }
     
-    function moveRight() {
+    const moveRight = () => {
       $(".slider ul").stop().animate({
         left: - slideWidth
       },700, function() {
